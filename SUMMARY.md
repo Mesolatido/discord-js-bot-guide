@@ -7,5 +7,5 @@
    * [Getting Started - Windows TL;DR](getting-started/windows-tldr.md)
 * Coding Walkthrough
    * [Your Basic Bot](coding-walkthroughs/your_basic_bot.md)
-   * Understanding Events and Handlers
+   * [Understanding Events and Handlers](coding-walkthroughs/events_and_handlers.md)
 
