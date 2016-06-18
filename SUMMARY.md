@@ -7,4 +7,5 @@
    * [Getting Started - Windows TL;DR](getting-started/windows-tldr.md)
 * Coding Walkthrough
    * [Your Basic Bot](coding-walkthroughs/your_basic_bot.md)
+   * Exploring Bot Events
 
