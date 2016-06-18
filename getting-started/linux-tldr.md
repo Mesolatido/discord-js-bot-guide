@@ -1,6 +1,6 @@
 # Getting Started - Linux Short Version
 
-> **This is the TL;DR version for Linux**. If you wish for a long version with more explanations, please see [this guide]()
+> **This is the TL;DR version for Linux**. If you wish for a long version with more explanations, please see [this guide](the-long-version.html)
 
 ## Create App and Bot Account
 
