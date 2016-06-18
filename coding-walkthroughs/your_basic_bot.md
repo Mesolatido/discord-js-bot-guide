@@ -114,7 +114,7 @@ That condition contains an *OR* operator, which reads as the following:
 > If the ID of the author of this message is the same as the ID of the bot, *OR* if the author of the message is another bot", stop processing.
 
 And now, we have a bot that only responds to 2 commands and does not waste any power trying to figure out anything else. Is this a complete basic bot? Sure! So let's end this page here and we'll take a look at some new concept next.
-
+ 
 The full bot code would now be:
 
 ```js
