@@ -6,4 +6,5 @@
    * [Getting Started - Linux TL;DR](getting-started/linux-tldr.md)
    * [Getting Started - Windows TL;DR](getting-started/windows-tldr.md)
 * Coding Walkthrough
+   * Your Basic Bot
 
