@@ -1,2 +1,2 @@
-# Your Basic Bot
+# Your First Bot
 
