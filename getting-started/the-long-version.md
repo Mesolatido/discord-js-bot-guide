@@ -3,7 +3,7 @@
 So, you want to write a bot and you know some JavaScript, or maybe even node.js. You want to do cool things like a music bot, tag commands, random image searches, the whole shebang. Well you're at the right place!
 
 > **This is the long version** with a whole lot of useless blabbering text, jokes, and explanations. 
-> TL;DR (short) versions: [Windows]() , [Linux]()
+> TL;DR (short) versions: [Windows]() , [Linux](linux-tldr.html)
 
 This tutorial will get you through the first steps of creating a bot, configuring it, making it run, and adding a couple of commands to it. 
 
