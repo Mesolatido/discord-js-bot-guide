@@ -1,6 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-* Getting Started
+* [Getting Started](getting-started/README.md)
    * Your First Steps
 
