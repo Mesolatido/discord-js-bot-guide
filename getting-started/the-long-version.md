@@ -71,7 +71,7 @@ So you have your CLI ready to go, in an empty folder, and you just wanna start c
 This will take a couple of heartbeats and display a lot of things on screen. Unless you have a big fat red message saying it didn't work, or package not found, or whatever, you're good to go. If you look at your folder, you'll notice that there's a new folder created here: `node_modules` . This contains all the installed packages for your project. 
 
 ## Getting your first bot running
-> **Note**: I honestly consider that if you don't understand the code you're about to see, coding a bot might not be for you. So if you get lost in the first half of this tutorial, please go to [CodeAcademy](https://www.codecademy.com/learn/javascript) and learn Javascript first. I beg of you.
+> **Note**: I honestly consider that if you don't understand the code you're about to see, coding a bot might not be for you. If you do not understand the following sample, please go to [CodeAcademy](https://www.codecademy.com/learn/javascript) and learn Javascript first. I beg of you: stop, drop, and roll.
 
 Ok finally, we're ready to start coding. **\o/**
 Let's take a look at the most basic of examples, the ping-pong bot. Here's the code in its entirety: 
