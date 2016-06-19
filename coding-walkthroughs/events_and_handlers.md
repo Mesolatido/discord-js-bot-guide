@@ -46,10 +46,20 @@ bot.on("serverNewMember", (server, user) => {
 });
 ```
 
+One thing about the above code, compared to the two other events, is that it gives you two separate objects, available within the event: `server` and `user`. 
+
+The objects available for each event are important: they're only available within these contexts. Calling `message` from the `serverNewMember` would not work - it's not in context. `bot` is always available within all its callbacks, of course. 
+
 
 
 
 
 ## Errors, Warn and Debug messages
 
-Yes, bots fail sometimes. And yes, the library can too! Even though this might be 
+Yes, bots fail sometimes. And yes, the library can too! (section in progress)
+
+```js
+bot.on('error', e => { log.error(e); });
+bot.on('warn', e => { log.warn(e); });
+bot.on('debug', e => { log.info(e); });
+```
