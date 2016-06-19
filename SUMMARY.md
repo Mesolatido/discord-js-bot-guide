@@ -8,4 +8,5 @@
 * Coding Walkthrough
    * [Your Basic Bot](coding-walkthroughs/your_basic_bot.md)
    * [Understanding Events and Handlers](coding-walkthroughs/events_and_handlers.md)
+* Code Examples
 
