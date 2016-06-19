@@ -104,14 +104,14 @@ bot.on("message", msg => {
   let prefix = "!";
   if(!msg.content.startsWith(prefix)) return;
   // our new check: 
-  if(msg.author.id == bot.user.id || msg.author.bot) return;  
+  if(msg.author.bot) return;  
   // [rest of the code]
 });
 ```
 
 That condition contains an *OR* operator, which reads as the following:
 
-> If the ID of the author of this message is the same as the ID of the bot, *OR* if the author of the message is another bot", stop processing.
+> If the ID of the author of this message is a bot", stop processing. This includes this bot, itself. 
 
 And now, we have a bot that only responds to 2 commands and does not waste any power trying to figure out anything else. Is this a complete basic bot? Sure! So let's end this page here and we'll take a look at some new concept next.
  
@@ -126,8 +126,8 @@ bot.on("message", msg => {
   let prefix = "!";
   // Exit and stop if it's not there
   if(!msg.content.startsWith(prefix)) return;
-  // Exit if self or other bot
-  if(msg.author.id == bot.user.id || msg.author.bot) return; 
+  // Exit if any bot
+  if(msg.author.bot) return;  
   
   if (msg.content.startsWith(prefix + "ping")) {
     bot.sendMessage(msg, "pong!");
