@@ -10,4 +10,5 @@
    * [Understanding Events and Handlers](coding-walkthroughs/events_and_handlers.md)
 * Code Examples
    * [Welcome Message every X users](samples/welcome_message_every_x_users.md)
+   * Message Reply Array
 
