@@ -51,12 +51,11 @@ One thing about the above code, compared to the two other events, is that it giv
 The objects available for each event are important: they're only available within these contexts. Calling `message` from the `serverNewMember` would not work - it's not in context. `bot` is always available within all its callbacks, of course. 
 
 
-
-
-
 ## Errors, Warn and Debug messages
 
-Yes, bots fail sometimes. And yes, the library can too! (section in progress)
+Yes, bots fail sometimes. And yes, the library can too! There's a little trick we can use, however, to prevent complete crashes sometimes: Capturing the `error` event. 
+
+The following small bit of code (which can be anywhere in your file, such as right before bot.loginWithToken) will catch all output message from discord.js. This includes all errors, warning and debug messages.
 
 ```js
 bot.on('error', e => { log.error(e); });
