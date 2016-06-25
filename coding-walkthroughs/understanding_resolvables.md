@@ -20,5 +20,5 @@ But what if you don't have the object or even the ID available? One of the quest
 
 Unfortunately, the *name* of a role is not considered a *role resolvable* and this fails. This is were caches come in: 
 
-`if(message.server.memberHasRole(message.server.roles.get("Bot Commander"))) { works;}`
+`if(message.server.memberHasRole(message.server.roles.get("name", "Bot Commander"))) { works;}`
 
