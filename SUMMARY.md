@@ -8,7 +8,7 @@
 * Coding Walkthrough
    * [Your First Bot](coding-walkthroughs/your_basic_bot.md)
    * [Understanding Events and Handlers](coding-walkthroughs/events_and_handlers.md)
-   * Understanding Resolvables
+   * [Understanding Resolvables](coding-walkthroughs/understanding_resolvables.md)
 * Code Examples
    * [Welcome Message every X users](samples/welcome_message_every_x_users.md)
    * [Message Reply Array](samples/message_reply_array.md)
