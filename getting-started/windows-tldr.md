@@ -15,10 +15,10 @@
 Install the following software in Windows: 
 
  - nodejs from [the downloads page](https://nodejs.org/en/download/)
- - python 2.7.x from [the downloads page](https://www.python.org/downloads/)
 
 If you need sound support, you'll need a bit more stuff: 
 
+- python 2.7.x from [the downloads page](https://www.python.org/downloads/)
 - ffmpeg which is available [on this page](http://adaptivesamples.com/how-to-install-ffmpeg-on-windows/)
 - Visual Studio **with C++** available [on this download page](https://www.visualstudio.com/en-us/features/cplusplus.aspx)
 
