@@ -15,10 +15,10 @@
 Install the following through your package manager: 
 
  - nodejs (version 4 or 6 recommended, see [here](https://nodejs.org/en/download/package-manager/))
- - python 2.7.x
 
 If you need sound support, add the following: 
 
+- python 2.7.x
 - ffmpeg
 - build-essential
 
