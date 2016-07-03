@@ -101,6 +101,10 @@ If all went well (hopefully it did) your bot is now connected to your server, it
 
 Success! You now have a bot running! As you probably realize by now I could probably blabber on from here, showing you a bunch of stuff. But the scope of this tutorial is completed, so I'll shut up now! Ciao!
 
+## The Next Step?
+
+Now that you have a basic, functional bot, it's time to start adding new features! Head on over to [Your First Bot](../coding-walkthroughs/your_basic_bot.html) to continue on your journey.
+
 ## Addendum: Getting help and Support
 Before you start getting support from Discord servers to help you with your bot, I strongly advise taking a look at the following, very useful, resources. 
 
