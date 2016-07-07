@@ -31,13 +31,13 @@ But wait, where do we welcome users? That's done in `serverNewMember`, when the 
 ```js
 bot.on("serverNewMember", (server, user) => {
   newUsers.add(user);
-});
 
-if(newUsers.length > 10) {
-  var userlist = newUsers.map(u => u.mention()).join(" ");
-  bot.sendMessage(server.defaultChannel, "Welcome our new users!\n"+userlist);
-  newUsers = new Discord.Cache();
-}
+  if(newUsers.length > 10) {
+    var userlist = newUsers.map(u => u.mention()).join(" ");
+    bot.sendMessage(server.defaultChannel, "Welcome our new users!\n"+userlist);
+    newUsers = new Discord.Cache();
+  }
+});
 ```
 
 Two lines require a little more explanation: 
