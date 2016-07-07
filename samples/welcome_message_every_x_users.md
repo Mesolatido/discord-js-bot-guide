@@ -59,13 +59,16 @@ const newUsers = [];
 bot.on("serverNewMember", (server, user) => {
   if(!newUsers[server.id]) newUsers[server.id] = new Discord.Cache();
   newUsers[server.id].add(user);
+
+  if(newUsers[server.id].length > 10) {
+    var userlist = newUsers[server.id].map(u => u.mention()).join(" ");
+    bot.sendMessage(server.defaultChannel, "Welcome our new users!\n"+userlist);
+    newUsers[server.id] = new Discord.Cache();
+  }
+
 });
 
-if(newUsers[server.id].length > 10) {
-  var userlist = newUsers[server.id].map(u => u.mention()).join(" ");
-  bot.sendMessage(server.defaultChannel, "Welcome our new users!\n"+userlist);
-  newUsers[server.id] = new Discord.Cache();
-}
+
 
 bot.loginWithToken("Your.Token");
 ```
