@@ -24,11 +24,11 @@ Ignore the fact that this code doesn't have a prefix and also does not ignore it
 First, we declare this object: 
 
 ```js
-var responseObject = {
+var responseObject = [
   "ayy": "Ayy, lmao!",
   "wat": "Say what?",
   "lol": "roflmaotntpmp"
-};
+];
 ```
 
 This simple object (which can easily be in a JSON file) can then be used in a single command checker, which would look like this: 
