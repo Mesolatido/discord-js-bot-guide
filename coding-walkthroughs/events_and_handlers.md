@@ -58,7 +58,7 @@ Yes, bots fail sometimes. And yes, the library can too! There's a little trick w
 The following small bit of code (which can be anywhere in your file, such as right before bot.loginWithToken) will catch all output message from discord.js. This includes all errors, warning and debug messages.
 
 ```js
-bot.on('error', e => { log.error(e); });
-bot.on('warn', e => { log.warn(e); });
-bot.on('debug', e => { log.info(e); });
+bot.on('error', e => { console.error(e); });
+bot.on('warn', e => { console.warn(e); });
+bot.on('debug', e => { console.info(e); });
 ```
