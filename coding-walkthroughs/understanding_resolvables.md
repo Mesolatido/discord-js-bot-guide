@@ -18,7 +18,7 @@ But what if you don't have the object or even the ID available? One of the quest
 
 `if(message.server.memberHasRole("Bot Commander")) { do something; }`
 
-Unfortunately, the *name* of a role is not considered a *role resolvable* and this fails. This is were caches come in: 
+Unfortunately, the *name* of a role is not considered a *role resolvable* and this fails. This is where caches come in: 
 
 `if(message.server.memberHasRole(message.server.roles.get("name", "Bot Commander"))) { works;}`
 
