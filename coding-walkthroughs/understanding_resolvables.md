@@ -16,9 +16,9 @@ Clearly, using a resolvable in context is straightforward. `message.server` is a
 
 But what if you don't have the object or even the ID available? One of the questions that come back often on #node_discord-js is the use of *Role Resolvables*. *Roles* are often used to check if a user has permission to access a certain command, and the biggest mistake new users make is to try this: 
 
-`if(message.server.memberHasRole("Bot Commander")) { do something; }`
+`if(bot.memberHasRole("Bot Commander")) { do something; }`
 
 Unfortunately, the *name* of a role is not considered a *role resolvable* and this fails. This is where caches come in: 
 
-`if(message.server.memberHasRole(message.server.roles.get("name", "Bot Commander"))) { works;}`
+`if(bot.memberHasRole(message.server.roles.get("name", "Bot Commander"))) { works;}`
 
