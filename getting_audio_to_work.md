@@ -40,4 +40,23 @@ For both Ubuntu 14.04 and Rasbpian Jessie 8, the `ffmpeg` package is not directl
 
 ### The easy way
 
-Because of changes 
+Because of changes in Microsoft's development ecosystem, it *should* be a relative breeze to install the appropriate requirements. If you're lucky, all you need to do is: 
+
+- FFMPEG, which needs to be downloaded, extracted, and added to path:
+  - Download either the 32 or 64 bit **static** version from [here](https://ffmpeg.zeranoe.com/builds/)
+  - Unzip the contents of the zip file to an easy location like C:\ffmpeg\ or something.
+  - Add the location where you unzipped the file, to your path (see [these instructions, step 3](http://adaptivesamples.com/how-to-install-ffmpeg-on-windows/))
+- The Build Tools:
+  - Make sure you have Node 4 or 6 installed (obviously).
+  - Open an *Admin* command prompt or *PowerShell*.
+  - Type in the following command: `npm i -g --production windows-build-tools`
+  - Wait for it to finish (could be a few minutes)
+  - Close this window.
+
+Once that's done, execute the following codes in your bot's folder:
+
+```
+npm i -g npm
+npm clean cache
+npm i discord.js
+```
