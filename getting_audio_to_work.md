@@ -53,6 +53,11 @@ Because of changes in Microsoft's development ecosystem, it *should* be a relati
   - Wait for it to finish (could be a few minutes)
   - Close this window.
 
+#### Verify that things work
+Before going further, verify that the pre-requisites do work.
+
+`ffmpeg` in a command line should return a block of text including the 
+
 Once that's done, execute the following codes in your bot's folder:
 
 ```
