@@ -10,7 +10,7 @@
    * [Understanding Events and Handlers](coding-walkthroughs/events_and_handlers.md)
    * [Understanding Resolvables](coding-walkthroughs/understanding_resolvables.md)
 * [Coding a Music Bot](coding_a_music_bot.md)
-   * Getting Audio to Work
+   * [Getting Audio to Work](getting_audio_to_work.md)
 * Code Examples
    * [Welcome Message every X users](samples/welcome_message_every_x_users.md)
    * [Message Reply Array](samples/message_reply_array.md)
