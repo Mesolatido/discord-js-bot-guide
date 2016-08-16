@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-   * Coding a Music Bot
 * [Getting Started](getting-started/README.md)
    * [Getting Started - Long Version](getting-started/the-long-version.md)
    * [Getting Started - Linux TL;DR](getting-started/linux-tldr.md)
@@ -10,6 +9,7 @@
    * [Your First Bot](coding-walkthroughs/your_basic_bot.md)
    * [Understanding Events and Handlers](coding-walkthroughs/events_and_handlers.md)
    * [Understanding Resolvables](coding-walkthroughs/understanding_resolvables.md)
+* Coding a Music Bot
 * Code Examples
    * [Welcome Message every X users](samples/welcome_message_every_x_users.md)
    * [Message Reply Array](samples/message_reply_array.md)
