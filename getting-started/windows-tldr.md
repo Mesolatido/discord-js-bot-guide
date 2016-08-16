@@ -16,11 +16,13 @@ Install the following software in Windows:
 
  - nodejs from [the downloads page](https://nodejs.org/en/download/)
 
-If you need sound support, you'll need a bit more stuff: 
+If you need sound support, you'll need 2 more things: 
 
-- python 2.7.x from [the downloads page](https://www.python.org/downloads/)
 - ffmpeg which is available [on this page](http://adaptivesamples.com/how-to-install-ffmpeg-on-windows/)
-- Visual Studio **with C++** available [on this download page](https://www.visualstudio.com/en-us/features/cplusplus.aspx)
+- The new windows build tools:
+  - Open an ADMIN command prompt, or PowerShell
+  - Run the following command: `npm i -g --production windows-build-tools`
+  - This installs Python 2.7 and the C++ Build Tools standalone.
 
 Once you have this all installed, create a folder for your project and install discord.js: 
 
@@ -33,6 +35,7 @@ Once you have this all installed, create a folder for your project and install d
 The following is a simple ping/pong bot. Save as a text file (e.g. `mybot.js`), replacing the string on the last line with the secret bot token you got earlier: 
 
 ```js
+'use strict';
 var Discord = require("discord.js");
 var bot = new Discord.Client();
 
