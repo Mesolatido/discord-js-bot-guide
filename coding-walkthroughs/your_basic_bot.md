@@ -14,7 +14,7 @@ bot.on("message", msg => {
     }
 });
 
-bot.loginWithToken("yourcomplicatedsecretcodehere");
+bot.loginWithToken("yourcomplicatedBotTokenhere");
 ```
 
 ## Introducing Events
@@ -138,5 +138,5 @@ bot.on("message", msg => {
   }
 });
 
-bot.loginWithToken("yourcomplicatedsecretcodehere");
+bot.loginWithToken("yourcomplicatedBotTokenhere");
 ```
