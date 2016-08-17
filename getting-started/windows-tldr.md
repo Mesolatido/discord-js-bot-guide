@@ -45,7 +45,7 @@ bot.on("message", msg => {
 	}
 });
 
-bot.loginWithToken("yourcomplicatedsecretcodehere");
+bot.loginWithToken("yourcomplicatedBotTokenhere");
 ```
 
 ## Launching the bot
