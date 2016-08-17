@@ -27,13 +27,14 @@ if (msg.content.startsWith(prefix + "ping")) {
 
 This generates an array that would look like `["!ping", "I'm", "a", "little", "teapot"]`, for instance. We can then access any part of that array using `args[0]` to `args[4]`, which return the string in that array position. And if you want to be more precise and don't want `args` to contain the `command`, you can just remove it from the array: `let args = msg.content.split(" ").slice(1);`. 
 
+> For more information on arrays, see [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+
 If you want, you can then specify argument *names* by referring to the array positions: 
 
 ```js
 if (msg.content.startsWith(prefix + "asl")) {
   let args = msg.content.split(" ").slice(1);
-  let age = args[0]; // yes, arrays are 0-based. I hate that too.
-  let sex = args[1]; // if you laugh at this variable name, grow up.
+  let age = args[0]; // yes, start at 0, not 1. I hate that too.
   let location = args[2];
   bot.reply(msg, `Hello ${msg.author.name}, I see you're a ${age} year old ${sex} from ${location}. Wanna date?`);
 } 
@@ -93,15 +94,19 @@ if (msg.content.startsWith(prefix + "newrole")) {
   let color = args[0];
   let hoist = args[1] === "yes" || args[1] === "true" ? true : false; // google "ternary if javascript"
   let rolename = args.slice(2).join(" "); // remove first 2 args, then join array with a space
-  bot.createRole(msg.server, {hoist: hoist, name: rolename, color: "0x"+color}).catch( (e) => { if(e) console.error(e) });
+  bot.createRole(msg.server, {hoist: hoist, name: rolename, color: color}).catch( (e) => { if(e) console.error(e) });
 } 
 ```
 
-> Colors for roles are essentially *hex* colors similar to html, but instead of #FFFFFF for white, it's 0xFFFFFF. I've automatically added the `0x` part so users wouldn't have to.
+> **Note**: Colors for roles are essentially *hex* colors similar to html, but instead of #FFFFFF for white, it's 0xFFFFFF. [Here's a handy reference color chart!](http://www.nthelp.com/colorcodes.htm)
 
 To use this command, a user would do something like: `!newrole 0000FF yes Eternal Noob`. 
 
-**Let's be fancy with ES6 again!** Destructuring has a `...rest` feature that lets you take "the rest of the array" and put it in a single variable. Similarly to the above shortened version, you could thus do:
+> If you're thinking, "What if I have more than one argument with spaces?", yes that's a tougher problem. Ideally, if you need more than one argument with spaces in it, do not use spaces to split the arguments. For example, `!newtag First Var Second Var Third Var` won't work. But `!newtag First Var;Second Var;Third Var;` can work if you first remove the command (with `var args = msg.content.split(" ")[1];`. Then you do `args = args.split(";");` and you get the arguments, properly separated!
+
+###Let's be fancy with ES6 again!
+
+Destructuring has a `...rest` feature that lets you take "the rest of the array" and put it in a single variable. Similarly to the above shortened version, you could thus do:
 
 ```js
 if (msg.content.startsWith(prefix + "newrole")) {
@@ -110,5 +115,3 @@ if (msg.content.startsWith(prefix + "newrole")) {
   bot.createRole(msg.server, {hoist: hoist, name: rolename, color: "0x"+color}).catch( (e) => { if(e) console.error(e) });
 } 
 ```
-
-> If you're thinking, "What if I have more than one argument with spaces?", yes that's a tougher problem. Ideally, if you need more than one argument with spaces in it, do not use spaces to split the arguments. For example, `!newtag First Var Second Var Third Var` won't work. But `!newtag First Var;Second Var;Third Var;` can work if you first remove the command (with `var args = msg.content.split(" ")[1];`. Then you do `args = args.split(";");` and you get the arguments, properly separated!
