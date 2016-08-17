@@ -40,9 +40,9 @@ When you do this, You get shown a window letting you choose the server where to 
 
 ![enter image description here](http://i.imgur.com/3XT7MCi.png)
 
-### Getting your Secret Token
+### Getting your Bot Token
 
-> Alright so, **big flashy warning**, **PAY ATTENTION**. This next part is really, really important: Your bot's **secret token** is meant to be **SECRET**. It is the way by which your bot authenticates with the Discord server in the same way that you login to Discord with a username and password. **Revealing your token is like putting your password on the internet**, and anyone that gets this token can use **your** bot connection to do things. Like delete all the messages on your server and ban everyone. If your token ever reaches the internet, **change it immediately**. This includes putting it on pastebin/hastebin, having it in a public github repository, displaying a screenshot of it, anything. **GOT IT? GOOD!**
+> Alright so, **big flashy warning**, **PAY ATTENTION**. This next part is really, really important: Your bot's **token** is meant to be **SECRET**. It is the way by which your bot authenticates with the Discord server in the same way that you login to Discord with a username and password. **Revealing your token is like putting your password on the internet**, and anyone that gets this token can use **your** bot connection to do things. Like delete all the messages on your server and ban everyone. If your token ever reaches the internet, **change it immediately**. This includes putting it on pastebin/hastebin, having it in a public github repository, displaying a screenshot of it, anything. **GOT IT? GOOD!**
 
 With that warning out of the way, on to the next step. The Secret Token, as I just mentioned, is the way in which the bot authenticates. To see it, just click on **click to reveal** next to **Token** in the Bot section of the page. You then get this: 
 ![enter image description here](http://i.imgur.com/6iaWr3u.png)
@@ -85,7 +85,7 @@ bot.on("message", msg => {
 	}
 });
 
-bot.loginWithToken("yourcomplicatedsecretcodehere");
+bot.loginWithToken("yourcomplicatedBotTokenhere");
 ```
 
 Ok let's just... actually get this guy to work, because this is literally **a functional bot**. So let's make it run! 
