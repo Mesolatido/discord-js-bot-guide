@@ -79,7 +79,7 @@ if (msg.content.startsWith(prefix + "kick")) {
 } 
 ```
 
-> There's a reason I'm adding error catching here. It's because the first time you use this command, you are most likely going to come to the realization that your bot does not have kick permissions. That is, assuming you actually read error messages and understand the word "Forbidden".
+> There's a reason I'm adding error catching here. It's because the first time you use this command, you are most likely going to come to the realization that your bot does not have kick permissions. You're welcome.
 
 ## Variable Length arguments
 
@@ -87,4 +87,28 @@ Let's say you want to have a command that creates a new role. To be honest I wou
 
 We'll give the role command 3 arguments: A role *name*, a role *color* and whether the role is *hoisted* (aka, shows separately in the user list). The order of these arguments is important here: *hoisted* and *color* will always be one word, but the role *name* can be variable. "Bot Commander" "Admin People", "Eternal Noobs" are all valid role names. So let's handle them right!
 
-(((( SHALL CONTINUE IN A MOMENT  PLEASE STAND BY ))))
+```js
+if (msg.content.startsWith(prefix + "newrole")) {
+  let args = msg.content.split(" ").slice(1);
+  let color = args[0];
+  let hoist = args[1] === "yes" || args[1] === "true" ? true : false; // google "ternary if javascript"
+  let rolename = args.slice(2).join(" "); // remove first 2 args, then join array with a space
+  bot.createRole(msg.server, {hoist: hoist, name: rolename, color: "0x"+color}).catch( (e) => { if(e) console.error(e) });
+} 
+```
+
+> Colors for roles are essentially *hex* colors similar to html, but instead of #FFFFFF for white, it's 0xFFFFFF. I've automatically added the `0x` part so users wouldn't have to.
+
+To use this command, a user would do something like: `!newrole 0000FF yes Eternal Noob`. 
+
+**Let's be fancy with ES6 again!** Destructuring has a `...rest` feature that lets you take "the rest of the array" and put it in a single variable. Similarly to the above shortened version, you could thus do:
+
+```js
+if (msg.content.startsWith(prefix + "newrole")) {
+  let [color, hoist, ...rolename] = msg.content.split(" ").slice(1);
+  hoist = hoist === "yes" || hoist === "true" ? true : false; // Still gotta do this check!
+  bot.createRole(msg.server, {hoist: hoist, name: rolename, color: "0x"+color}).catch( (e) => { if(e) console.error(e) });
+} 
+```
+
+> If you're thinking, "What if I have more than one argument with spaces?", yes that's a tougher problem. Ideally, if you need more than one argument with spaces in it, do not use spaces to split the arguments. For example, `!newtag First Var Second Var Third Var` won't work. But `!newtag First Var;Second Var;Third Var;` can work if you first remove the command (with `var args = msg.content.split(" ")[1];`. Then you do `args = args.split(";");` and you get the arguments, properly separated!
