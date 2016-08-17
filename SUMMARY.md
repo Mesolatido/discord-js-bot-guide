@@ -15,4 +15,5 @@
    * [Welcome Message every X users](samples/welcome_message_every_x_users.md)
    * [Message Reply Array](samples/message_reply_array.md)
    * [Command with arguments](samples/command_with_arguments.md)
+   * Selfbots, the awesomest thing in the universe
 
