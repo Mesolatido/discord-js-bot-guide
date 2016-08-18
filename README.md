@@ -10,9 +10,9 @@ Seeing as though there needed to be some more detailed explanations as well as c
 
 I will update this guide with each new version of discord.js, as time permits. However, I will gladly accept any contributions to this guide as long as they maintain an appropriate level of grammar and vocabulary. Please don't hesitate to contribute!
 
-Current Discord Version: `8.0.0` 
+Current Discord Version: `8.1.0` 
 
-Last Updated: `6/25/2016`
+Last Updated: `8/18/2016`
 
 ## Special Thanks
 
