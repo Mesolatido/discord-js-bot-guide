@@ -5,6 +5,7 @@
    * [Getting Started - Long Version](getting-started/the-long-version.md)
    * [Getting Started - Linux TL;DR](getting-started/linux-tldr.md)
    * [Getting Started - Windows TL;DR](getting-started/windows-tldr.md)
+   * Installing and Using a proper editor
 * Coding Walkthrough
    * [Your First Bot](coding-walkthroughs/your_basic_bot.md)
    * [Understanding Events and Handlers](coding-walkthroughs/events_and_handlers.md)
