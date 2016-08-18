@@ -59,8 +59,6 @@ I've already covered why Bot Tokens should remain secret in the [Getting Started
 
 Here are a few useful examples of commands that I like to use. 
 
-> **Note**: some of these commands expect a database connection, which in my case is SQlite. It is beyond this particular page to show you databases, it will be covered in another sample.
-
 ### Prune Command
 
 A *Prune* command is used to delete your own messages from the channel you're on. Since there is no way for any server owner to prevent you from deleting or editing your own messages, this will always work. The command is called as `/prune X` where 99 is the maximum number of messages to remove, and the prefix depends on your own prefix.
