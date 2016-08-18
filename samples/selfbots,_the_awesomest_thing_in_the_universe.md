@@ -32,16 +32,16 @@ The code that creates selfbots is essentially the same as regular bots, because.
 
 In the latest #indev version (Which will become 8.2 eventually), a new option is necessary for selfbots. When declaring your client, you need to add the `{bot: false}` option. So, for example: 
 
-```
+```js
 const Discord = require('discord.js');
 const bot = new Discord.Client({forceFetchUsers: true, autoReconnect: true, bot: false});
 ```
 
 This is not relevant to 8.1.0 or earlier versions.
 
-### Respond to you only
+### Respond only to you
 
-The second difference is your `message` handler. It should start with a line that prevents the bot from interacting with anyone else's messages: 
+The second difference is your `message` handler. It should start with a line that prevents the bot from interacting with anyone else's messages (see rule #1 above): 
 
 ```js
 bot.on("message", msg => {
