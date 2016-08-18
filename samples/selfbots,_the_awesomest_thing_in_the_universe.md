@@ -12,7 +12,7 @@ First, let's define what a *userbot is*. A Userbot is **a bot that is running un
 
 On the other hand, a **selfbot** runs under an **active** user account. In other words, **your** account. When it posts a message, it's like you did. It can edit and delete your messages, has the same permissions you have, is on the same servers. **It's you**.
 
-> **I AM NOT RESPONSIBLE AND CANNOT BE HELD LIABLE IF YOU MESS UP WITH SELFBOTS. THIS INCLUDES BUT IS NOT LIMITED TO LOSING PRIVILEGES, GETTING KICKED OR BANNED FROM SERVERS, OR BEING BANNED 
+> **I AM NOT RESPONSIBLE AND CANNOT BE HELD LIABLE IF YOU MESS UP WITH SELFBOTS. THIS INCLUDES BUT IS NOT LIMITED TO LOSING PRIVILEGES, GETTING KICKED OR BANNED FROM SERVERS, OR BEING BANNED**
 
 ## What are the rules for selfbots?
 
