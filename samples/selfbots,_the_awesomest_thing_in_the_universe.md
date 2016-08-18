@@ -28,7 +28,16 @@ I mentioned that *userbots* are not tolerated by Hammer & Chisel. Selfbots, howe
 
 The code that creates selfbots is essentially the same as regular bots, because... well it's the same library, right? 
 
-### d.js 
+### d.js new "bot" option
+
+In the latest #indev version (Which will become 8.2 eventually), a new option is necessary for selfbots. When declaring your client, you need to add the `{bot: false}` option. So, for example: 
+
+```
+const Discord = require('discord.js');
+const bot = new Discord.Client({forceFetchUsers: true, autoReconnect: true, bot: false});
+```
+
+This is not relevant to 8.1.0 or earlier versions.
 
 ### Respond to you only
 
