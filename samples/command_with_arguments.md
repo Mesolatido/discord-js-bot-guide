@@ -63,7 +63,7 @@ Let's build a quick and dirty `kick` command, then.
 if (msg.content.startsWith(prefix + "kick")) {
   // I'll make a code example on how to check if the user is allowed, one day!
   let userToKick = msg.mentions[0];
-  bot.kickMember(userToKick, msg.server).catch( (e) => { if(e) console.error(e) });
+  bot.kickMember(userToKick, msg.server).catch(console.error);
   // see I even catch the error!
 } 
 ```
@@ -74,7 +74,7 @@ If you want to support *multiple* mentions, then you'll have to loop through eac
 if (msg.content.startsWith(prefix + "kick")) {
   // I'll make a code example on how to check if the user is allowed, one day!
   msg.mentions.map( (user) => {
-    bot.kickMember(user, msg.server).catch( (e) => { if(e) console.error(e) });
+    bot.kickMember(user, msg.server).catch(console.error);
   });
   // Yes that's right, I'm using ECMAScript 6 to confuse you again.
 } 
@@ -94,7 +94,7 @@ if (msg.content.startsWith(prefix + "newrole")) {
   let color = args[0];
   let hoist = args[1] === "yes" || args[1] === "true" ? true : false; // google "ternary if javascript"
   let rolename = args.slice(2).join(" "); // remove first 2 args, then join array with a space
-  bot.createRole(msg.server, {hoist: hoist, name: rolename, color: color}).catch( (e) => { if(e) console.error(e) });
+  bot.createRole(msg.server, {hoist: hoist, name: rolename, color: color}).catch(console.error);
 } 
 ```
 
@@ -112,6 +112,6 @@ Destructuring has a `...rest` feature that lets you take "the rest of the array"
 if (msg.content.startsWith(prefix + "newrole")) {
   let [color, hoist, ...rolename] = msg.content.split(" ").slice(1);
   hoist = hoist === "yes" || hoist === "true" ? true : false; // Still gotta do this check!
-  bot.createRole(msg.server, {hoist: hoist, name: rolename, color: "0x"+color}).catch( (e) => { if(e) console.error(e) });
+  bot.createRole(msg.server, {hoist: hoist, name: rolename, color: "0x"+color}).catch(console.error);
 } 
 ```
