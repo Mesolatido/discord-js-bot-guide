@@ -131,7 +131,7 @@ bot.on("message", msg => {
   
   // custom shortcut check
   var command_name = msg.contents.slice(1); // removes the prefix, keeps the rest
-  if(shortcuts.has(command_name) {
+  if(shortcuts.has(command_name)) {
     // setTimeout is used here because of a bug in message delays in Discord.
     // Otherwise the message would edit and then "seem" to un-edit itself... ¯\_(ツ)_/¯
     setTimeout( () => { bot.editMessage(msg, shortcuts.get(command_name)) }, 10);
