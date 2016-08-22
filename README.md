@@ -6,6 +6,12 @@ I decided to write this gitbook because it's become obvious that the examples fo
 
 Seeing as though there needed to be some more detailed explanations as well as code samples, I figured a "book" would be a great place to start!
 
+## Patreon
+
+Yes, this guide takes a lot of my time to write. Yes, I would appreciate some donations to keep me going. Yes, this is the first time I've ever done this.
+
+[![Become a Patron](https://s3.amazonaws.com/patreon_public_assets/toolbox/patreon.png)](http://patreon.com/eslachance)
+
 ## Updating of this guide
 
 I will update this guide with each new version of discord.js, as time permits. However, I will gladly accept any contributions to this guide as long as they maintain an appropriate level of grammar and vocabulary. Please don't hesitate to contribute!
