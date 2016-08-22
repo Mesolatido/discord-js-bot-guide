@@ -12,6 +12,8 @@ I will update this guide with each new version of discord.js, as time permits. H
 
 Current Discord Version: `8.1.0` 
 
+> As `Discord.js` is currently in Alpha for a **rewrite** please note that this guide does **not** apply to the rewrite.
+
 Last Updated: `8/18/2016`
 
 ## Special Thanks
