@@ -95,7 +95,7 @@ bot.on("message", msg => {
       // limit to the requested number + 1 for the command message
       messages.length = messagecount+1;
       // Has to delete messages individually. Cannot use `deleteMessages()` on selfbots.
-      messages.map(m => bot.deleteMessage(m, (err) => {if(err){log(err)}}));
+      messages.map(m => bot.deleteMessage(m, (err) => console.error));
    });
   }
 });
@@ -130,11 +130,11 @@ bot.on("message", msg => {
   if(!msg.content.startsWith(prefix)) return;
   
   // custom shortcut check
-  var command_name = msg.contents.slice(1); // removes the prefix, keeps the rest
+  var command_name = msg.content.slice(1); // removes the prefix, keeps the rest
   if(shortcuts.has(command_name)) {
     // setTimeout is used here because of a bug in message delays in Discord.
     // Otherwise the message would edit and then "seem" to un-edit itself... ¯\_(ツ)_/¯
-    setTimeout( () => { bot.editMessage(msg, shortcuts.get(command_name)) }, 10);
+    setTimeout( () => { bot.update(msg, shortcuts.get(command_name)) }, 25);
     return;
   }
   
