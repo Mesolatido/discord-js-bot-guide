@@ -35,6 +35,7 @@ If you want, you can then specify argument *names* by referring to the array pos
 if (msg.content.startsWith(prefix + "asl")) {
   let args = msg.content.split(" ").slice(1);
   let age = args[0]; // yes, start at 0, not 1. I hate that too.
+  let sex = args[1];
   let location = args[2];
   bot.reply(msg, `Hello ${msg.author.name}, I see you're a ${age} year old ${sex} from ${location}. Wanna date?`);
 } 
