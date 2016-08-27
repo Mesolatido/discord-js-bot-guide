@@ -1,4 +1,4 @@
-# Discord.js bot guide
+# Discord.js (indev-rewrite) Bot Guide
 
 ## Introduction
 
@@ -16,11 +16,11 @@ Yes, this guide takes a lot of my time to write. Yes, I would appreciate some do
 
 I will update this guide with each new version of discord.js, as time permits. However, I will gladly accept any contributions to this guide as long as they maintain an appropriate level of grammar and vocabulary. Please don't hesitate to contribute!
 
-Current Discord Version: `8.1.0` 
+Current Discord Version: `indev-rewrite` 
 
-> As `Discord.js` is currently in Alpha for a **rewrite** please note that this guide does **not** apply to the rewrite.
+> This is the modified version of the Bot Guide for the `indev-rewrite` branch of Discord.js. Code found here is not compatible with version 7 and 8 of Discord.js.
 
-Last Updated: `8/18/2016`
+Last Updated: `8/27/2016`
 
 ## Special Thanks
 
