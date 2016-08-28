@@ -1,4 +1,7 @@
 # Understanding Resolvables
+
+> **NOTE** THIS WHOLE SECTION NEEDS A REWRITE AND IS NO LONGER UP TO DATE DUE TO REWRITE
+
 In this page we'll explore the different ways in which you can use resolvables, and identify them.
 
 In the discord.js documentation you will come across the term *resolvable*. In essence, this word means "something used to identify an object". For instance, a *User Resolvable* is, "something used to identify a user". 
