@@ -65,7 +65,9 @@ And now ready for the next step!
 
 So you have your CLI ready to go, in an empty folder, and you just wanna start coding. Alright, hold on one last second: let's install discord.js first. We do this using the Node Package Manager, or NPM: 
 
-`npm install discord.js`
+> This guide before for the *rewrite* which is currently in alpha. This is for that version.
+
+`npm i --save --no-optional hydrabolt/discord.js#indev-rewrite`
 
 This will take a couple of heartbeats and display a lot of things on screen. Unless you have a big fat red message saying it didn't work, or package not found, or whatever, you're good to go. If you look at your folder, you'll notice that there's a new folder created here: `node_modules` . This contains all the installed packages for your project. 
 
@@ -81,17 +83,23 @@ var bot = new Discord.Client();
 
 bot.on("message", msg => {
 	if (msg.content.startsWith("ping")) {
-		bot.sendMessage(msg, "pong!");
+		msg.channel.sendMessage("pong!");
 	}
 });
 
-bot.loginWithToken("yourcomplicatedBotTokenhere");
+bot.on('ready', () => {
+  console.log('I am ready!');
+});
+
+bot.login("yourcomplicatedBotTokenhere");
 ```
+
+> The variable `bot` here is used an an example. The documentation uses `client`. Other people use whatever they want. When you see `client` or `bot` use whatever you put on the 2nd line of that code.
 
 Ok let's just... actually get this guy to work, because this is literally **a functional bot**. So let's make it run! 
 
  1. Copy that code and paste it in your editor.
- 2. Replace the string in the `bot.loginWithToken()` function with *your* secret token
+ 2. Replace the string in the `bot.login()` function with *your* secret token
  3. Save the file as `mybot.js`.
  4. In the CLI (which should still be in your project folder) type the following command: `node mybot.js`
 
@@ -108,7 +116,6 @@ Now that you have a basic, functional bot, it's time to start adding new feature
 ## Addendum: Getting help and Support
 Before you start getting support from Discord servers to help you with your bot, I strongly advise taking a look at the following, very useful, resources. 
 
- - [Discord.js Examples](https://github.com/hydrabolt/discord.js/tree/master/examples) : There are a couple of examples here including one for permission check, some with multiple commands, one pretty complex ones with data analysis (still understandable however). Go through these and understand how they are structured.
  - [Discord.js Documentation](http://discordjs.readthedocs.io/en/latest/index.html) : For the love of all that is (un)holy, **read the documentation**. Yes, it will be alien at first if you are not used to "developer documentation" but it contains a whole lot of information about each and every feature of the API. Combine this with the examples above to see the API in context.
 
 If you have any issue with your code *that is not due to you being inexperienced in Javascript*, you may join the [Discord.js API official server](https://discord.gg/seraph-leblanc-oracle). The #node_discord-js channel on this server is there to help you with basic troubleshooting and complex implementation issues. We try to be helpful, but please understand that we're not there to teach you JavaScript. 
