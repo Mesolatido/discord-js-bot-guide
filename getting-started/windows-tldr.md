@@ -35,17 +35,20 @@ Once you have this all installed, create a folder for your project and install d
 The following is a simple ping/pong bot. Save as a text file (e.g. `mybot.js`), replacing the string on the last line with the secret bot token you got earlier: 
 
 ```js
-'use strict';
 var Discord = require("discord.js");
 var bot = new Discord.Client();
 
 bot.on("message", msg => {
 	if (msg.content.startsWith("ping")) {
-		bot.sendMessage(msg, "pong!");
+		msg.channel.sendMessage("pong!");
 	}
 });
 
-bot.loginWithToken("yourcomplicatedBotTokenhere");
+bot.on('ready', () => {
+  console.log('I am ready!');
+});
+
+bot.login("yourcomplicatedBotTokenhere");
 ```
 
 ## Launching the bot
