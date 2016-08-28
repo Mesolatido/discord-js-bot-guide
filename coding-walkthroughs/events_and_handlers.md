@@ -28,6 +28,8 @@ To ensure that `bot` and all its "stuff" is ready, we can use the `ready` event.
 
 Here's a simple example of using the `ready` event handler:
 
+> The sizes for Collections (like channels and users) depends on the `forceFetchUsers` option in the client. See 
+
 ```js
 bot.on("ready", () => {
 	console.log(`Ready to server in ${bot.channels.size} channels on ${bot.guilds.size} servers, for a total of ${bot.users.size} users.`);
@@ -42,7 +44,7 @@ I have this in all my bots, in various forms. If you need to loop across all you
 Another useful event is `serverNewMember` which triggers whenever someone joins any of the servers the bot is on. You'll see this on smaller servers: a bot welcomes every new member in the #general channel. The following code does this.
 
 ```js
-bot.on("serverNewMember", (server, user) => {
+bot.on("guildMemberAdd", (server, user) => {
 	console.log(`New User "${user.username}" has joined "${server.name}"` );
 	bot.sendMessage(server.defaultChannel, `"${user.username}" has joined this server`);
 });
@@ -54,6 +56,8 @@ The objects available for each event are important: they're only available withi
 
 
 ## Errors, Warn and Debug messages
+
+> These events have not yet been added to the Rewrite and are not available at the time of writing.
 
 Yes, bots fail sometimes. And yes, the library can too! There's a little trick we can use, however, to prevent complete crashes sometimes: Capturing the `error` event. 
 
