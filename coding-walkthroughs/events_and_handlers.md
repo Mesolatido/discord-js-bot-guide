@@ -1,5 +1,7 @@
 # Understanding Events and Handlers
 
+> **NOTE** THIS WHOLE SECTION NEEDS A REWRITE AND IS NO LONGER UP TO DATE
+
 We already explored one event handler in [Your Basic Bot](your-basic-bot.html), the `message` handler. Now let's take a look at some of the most important handlers that you will use, along with an example.
 
 > **Don't nest events**
@@ -17,7 +19,7 @@ var mybot = new Discord.Client();
 
 console.log(mybot.user.id);
 
-mybot.loginWithToken("token");
+mybot.login("token");
 ```
 
 This code will not work, because `mybot` is not immediately available after it's been initialized. `mybot.user` will be undefined in this case, even if we flipped the console.log and login lines. Well it might work - sometimes. This is because it takes a small amount of time for discord.js to load its servers, users, channels, and all that jazz. The more servers the bot is on, the longer it takes. 
@@ -28,7 +30,7 @@ Here's a simple example of using the `ready` event handler:
 
 ```js
 bot.on("ready", () => {
-	console.log(`Ready to server in ${bot.channels.length} channels on ${bot.servers.length} servers, for a total of ${bot.users.length} users.`);
+	console.log(`Ready to server in ${bot.channels.size} channels on ${bot.guilds.size} servers, for a total of ${bot.users.size} users.`);
 });
 ```
 
