@@ -7,7 +7,7 @@ In this page we'll explore the different ways in which you can use resolvables, 
 In the discord.js documentation you will come across the term *resolvable*. In essence, this word means "something used to identify an object". For instance, a *User Resolvable* is, "something used to identify a user". 
 
 
-Take for instance the *Channel Resolvable*. One of its main uses is inside the **client.sendMessage()** function, where it defines the, you guessed it, *Channel* where the message is sent. Here's what the documentation says are acceptable channel resolvables: Channel, Server, Message, User (in some instances), String of Channel ID, String of User ID.
+Take for instance the *Channel Resolvable*. One of its main uses is inside the **channel.sendMessage()** function, where it defines the, you guessed it, *Channel* where the message is sent. Here's what the documentation says are acceptable channel resolvables: Channel, Server, Message, User (in some instances), String of Channel ID, String of User ID.
 
 Let's pretend you're within your `message` event handler, where you've received a message from a user on a channel. You want to reply with a message, not to the channel, but directly to the user. **client.sendMessage()** indicates that a *Channel Resolvable* can be used in its first parameter. Using the list above, then, we know that `User` is accepted. In this context, it means the message is sent to the user, *in a private message*. 
 
