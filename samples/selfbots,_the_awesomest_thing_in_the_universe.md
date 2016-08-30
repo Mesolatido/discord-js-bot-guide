@@ -47,7 +47,7 @@ The second difference is your `message` handler. It should start with a line tha
 bot.on("message", msg => {
   if(msg.author !== bot.user) return;
   // rest of the code for commands go here
-}
+});
 ```
 
 This condition says: "if the author of the message is **not** the bot user, stop processing". This is generic code that works for everyone, and it fulfills our first condition so **don't forget it**.
