@@ -1,4 +1,4 @@
-# Selfbots, the awesomest thing in the universe
+# Selfbots, the greatest thing in the universe
 
 So, my friend, you are wondering what is a selfbot? Well let me tell you a little story.
 
