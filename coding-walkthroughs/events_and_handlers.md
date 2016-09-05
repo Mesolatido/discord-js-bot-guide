@@ -1,7 +1,5 @@
 # Understanding Events and Handlers
 
-> **NOTE** THIS WHOLE SECTION NEEDS A REWRITE AND IS NO LONGER UP TO DATE
-
 We already explored one event handler in [Your Basic Bot](your-basic-bot.html), the `message` handler. Now let's take a look at some of the most important handlers that you will use, along with an example.
 
 > **Don't nest events**
@@ -28,7 +26,7 @@ To ensure that `bot` and all its "stuff" is ready, we can use the `ready` event.
 
 Here's a simple example of using the `ready` event handler:
 
-> The sizes for Collections (like channels and users) depends on the `forceFetchUsers` option in the client. See 
+> The sizes for Collections (like channels and users) depends on the `fetch_all_members: true` option in the client.
 
 ```js
 bot.on("ready", () => {
@@ -41,27 +39,27 @@ I have this in all my bots, in various forms. If you need to loop across all you
 
 ## Detecting New Members
 
-Another useful event is `serverNewMember` which triggers whenever someone joins any of the servers the bot is on. You'll see this on smaller servers: a bot welcomes every new member in the #general channel. The following code does this.
+Another useful event is [`guildMemberAdd`](http://hydrabolt.github.io/discord.js/#!/docs/tag/indev/class/Client?scrollto=guildMemberAdd) which triggers whenever someone joins any of the servers the bot is on. You'll see this on smaller servers: a bot welcomes every new member in the #general channel. The following code does this.
 
 ```js
-bot.on("guildMemberAdd", (server, user) => {
-	console.log(`New User "${user.username}" has joined "${server.name}"` );
-	bot.sendMessage(server.defaultChannel, `"${user.username}" has joined this server`);
+bot.on("guildMemberAdd", (guild, user) => {
+	console.log(`New User "${user.username}" has joined "${guild.name}"` );
+	guild.defaultChannel.sendMessage(`"${user.username}" has joined this server`);
 });
 ```
 
 One thing about the above code, compared to the two other events, is that it gives you two separate objects, available within the event: `server` and `user`. 
 
-The objects available for each event are important: they're only available within these contexts. Calling `message` from the `serverNewMember` would not work - it's not in context. `bot` is always available within all its callbacks, of course. 
+The objects available for each event are important: they're only available within these contexts. Calling `message` from the `guildMemberAdd` would not work - it's not in context. `bot` is always available within all its callbacks, of course. 
 
 
 ## Errors, Warn and Debug messages
 
-> These events have not yet been added to the Rewrite and are not available at the time of writing.
+> These events have not yet been added as of 9.0.2 and are not available at the time of writing.
 
 Yes, bots fail sometimes. And yes, the library can too! There's a little trick we can use, however, to prevent complete crashes sometimes: Capturing the `error` event. 
 
-The following small bit of code (which can be anywhere in your file, such as right before bot.loginWithToken) will catch all output message from discord.js. This includes all errors, warning and debug messages.
+The following small bit of code (which can be anywhere in your file, such as right before bot.login) will catch all output message from discord.js. This includes all errors, warning and debug messages.
 
 ```js
 bot.on('error', e => { console.error(e); });
