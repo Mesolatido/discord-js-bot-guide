@@ -28,24 +28,13 @@ I mentioned that *userbots* are not tolerated by Hammer & Chisel. Selfbots, howe
 
 The code that creates selfbots is essentially the same as regular bots, because... well it's the same library, right? 
 
-### d.js new "bot" option
-
-In the latest #indev version (Which will become 8.2 eventually), a new option is necessary for selfbots. When declaring your client, you need to add the `{bot: false}` option. So, for example: 
-
-```js
-const Discord = require('discord.js');
-const bot = new Discord.Client({forceFetchUsers: true, autoReconnect: true, bot: false});
-```
-
-This is not relevant to 8.1.0 or earlier versions.
-
 ### Respond only to you
 
-The second difference is your `message` handler. It should start with a line that prevents the bot from interacting with anyone else's messages (see rule #1 above): 
+The first difference is your `message` handler. It should start with a line that prevents the bot from interacting with anyone else's messages (see rule #1 above): 
 
 ```js
-bot.on("message", msg => {
-  if(msg.author !== bot.user) return;
+bot.on("message", message => {
+  if(message.author !== bot.user) return;
   // rest of the code for commands go here
 });
 ```
@@ -54,7 +43,7 @@ This condition says: "if the author of the message is **not** the bot user, stop
 
 ### The Token
 
-The last difference, is how the bot logs in. To log a regular bot, you grab the Bot Token from the Applications Page, then put it in the `bot.loginWithToken()` function.
+The second difference, is how the bot logs in. To log a regular bot, you grab the Bot Token from the Applications Page, then put it in the `bot.login()` function.
 
 In the case of a selfbot, this token can be obtained from the Discord application, from the Console:
 1. From either the web application, or the installed Discord app, use the **CTRL+SHIFT+I** keyboard shortcut.
@@ -75,27 +64,28 @@ A *Prune* command is used to delete your own messages from the channel you're on
 > `getChannelLogs()` is limited to 100 messages total, and gets *all* the messages and not just your own. This means you will probably never be able to delete 100 messages since they'll be mixed in with other people's. I generally don't use it to prune more than 10 messages anyway.
 
 ```js
-bot.on("message", msg => {
-  if(msg.author !== bot.user) return;
+bot.on("message", message => {
+  if(message.author !== bot.user) return;
 
   var prefix = "/"; // always use a prefix it's good practice.
-  if(!msg.content.startsWith(prefix)) return; // ignore messages that... you know the drill.
+  if(!message.content.startsWith(prefix)) return; // ignore messages that... you know the drill.
   
   // We covered this already, yay!
-  const params = msg.content.split(" ").slice(1);
+  const params = message.content.split(" ").slice(1);
 
-  if(msg.content.startsWith(prefix+"prune")) {
+  if(message.content.startsWith(prefix+"prune")) {
     // get number of messages to prune
     let messagecount = parseInt(params[0]);
     // get the channel logs
-    bot.getChannelLogs(msg.channel, 100, (err, messages) => {
-      if(err) {console.error(err)}
+    message.channel.fetchMessages({limit: 100})
+    .then(messages => {
+      let msg_array = messages.array();
       // filter the message to only your own
-      messages = messages.filter(m => m.author.id === bot.user.id);
+      msg_array = msg_array.filter(m => m.author.id === bot.user.id);
       // limit to the requested number + 1 for the command message
-      messages.length = messagecount+1;
+      msg_array.length = messagecount + 1;
       // Has to delete messages individually. Cannot use `deleteMessages()` on selfbots.
-      messages.map(m => bot.deleteMessage(m, (err) => console.error));
+      msg_array.map(m => m.delete().catch(console.error));
    });
   }
 });
@@ -124,17 +114,17 @@ There's technically only 2 "new" commands here. The rest are there because I lik
 The next step is to add the check at the beginning of your message handler. Well not quite: this code should be *right after* your prefix check, before you split into parameters, for maximum code efficiency.
 
 ```js
-bot.on("message", msg => {
-  if(msg.author !== bot.user) return;
+bot.on("message", message => {
+  if(message.author !== bot.user) return;
   var prefix = "/";
-  if(!msg.content.startsWith(prefix)) return;
+  if(!message.content.startsWith(prefix)) return;
   
   // custom shortcut check
-  var command_name = msg.content.slice(1); // removes the prefix, keeps the rest
+  var command_name = message.content.slice(1); // removes the prefix, keeps the rest
   if(shortcuts.has(command_name)) {
     // setTimeout is used here because of a bug in message delays in Discord.
     // Otherwise the message would edit and then "seem" to un-edit itself... ¯\_(ツ)_/¯
-    setTimeout( () => { bot.update(msg, shortcuts.get(command_name)) }, 25);
+    setTimeout( () => { message.edit(shortcuts.get(command_name)) }, 50);
     return;
   }
   

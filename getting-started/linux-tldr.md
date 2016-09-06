@@ -25,7 +25,7 @@ If you need sound support, add the following:
 Once you have this all installed, create a folder for your project and install discord.js: 
 
 `mkdir mybot && cd mybot`
-`npm install discord.js`
+`npm install hydrabolt/discord.js#indev-rewrite`
 
 ## Example Code
 
@@ -37,11 +37,15 @@ var bot = new Discord.Client();
 
 bot.on("message", msg => {
 	if (msg.content.startsWith("ping")) {
-		bot.sendMessage(msg, "pong!");
+		msg.channel.sendMessage("pong!");
 	}
 });
 
-bot.loginWithToken("yourcomplicatedBotTokenhere");
+bot.on('ready', () => {
+  console.log('I am ready!');
+});
+
+bot.login("yourcomplicatedBotTokenhere");
 ```
 
 ## Launching the bot
