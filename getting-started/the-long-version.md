@@ -65,9 +65,7 @@ And now ready for the next step!
 
 So you have your CLI ready to go, in an empty folder, and you just wanna start coding. Alright, hold on one last second: let's install discord.js first. We do this using the Node Package Manager, or NPM: 
 
-> This guide before for the *rewrite* which is currently in alpha. This is for that version.
-
-`npm i --save --no-optional hydrabolt/discord.js#indev-rewrite`
+`npm i --save --no-optional discord.js`
 
 This will take a couple of heartbeats and display a lot of things on screen. Unless you have a big fat red message saying it didn't work, or package not found, or whatever, you're good to go. If you look at your folder, you'll notice that there's a new folder created here: `node_modules` . This contains all the installed packages for your project. 
 
