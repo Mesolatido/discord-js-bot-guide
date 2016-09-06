@@ -6,6 +6,13 @@ I decided to write this guide because it's become obvious that the examples for 
 
 Seeing as though there needed to be some more detailed explanations as well as code samples, I figured a guide would be a great place to start! 
 
+## Get Support
+If you have any questions after reading this guide please join us on the official Discord.js server:
+
+[![Join the Discord.js Server](https://i.imgur.com/oJgskh7.png)](https://discord.gg/bRCvFy9)
+
+![Discord.js Official Server](https://discordapp.com/api/guilds/222078108977594368/embed.png)
+
 ## Patreon
 
 Yes, this guide takes a lot of my time to write. Yes, I would appreciate some donations to keep me going. Yes, this is the first time I've ever done this.
