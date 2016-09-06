@@ -27,4 +27,12 @@ If you don't have the ID but only some other property, you may use `find()` to s
 
 *Collections* also have a custom way to filter their content with an anonymous function: 
 
-< need to continue writing this >
+`let large_guilds = bot.builds.filter(g=> g.members.size>100);`
+
+## Other helpers
+
+Some other helpers that are available in *Collections*:
+
+- .get(id)
+- .map(function)
+- .find(key, value)
