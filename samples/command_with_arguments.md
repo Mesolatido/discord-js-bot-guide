@@ -10,8 +10,8 @@ The first thing that we need to do to use arguments, is to actually separate the
 In [Your First Bot](../coding-walkthroughs/your_basic_bot.md) we actually simplify our task just a bit: our check for commands uses `startsWith()`: 
 
 ```js
-if (msg.content.startsWith(prefix + "ping")) {
-  bot.sendMessage(msg, "pong!");
+if (message.content.startsWith(prefix + "ping")) {
+  message.channel.sendMessage("pong!");
 } 
 ```
 
@@ -20,32 +20,32 @@ This means that `!ping whaddup` or `!ping I'm a little teapot` would both trigge
 Let's start with creating an *Array* containing each word after our command, using the `.split()` function: 
 
 ```js
-if (msg.content.startsWith(prefix + "ping")) {
-  let args = msg.content.split(" ");
+if (message.content.startsWith(prefix + "ping")) {
+  let args = message.content.split(" ");
 } 
 ```
 
-This generates an array that would look like `["!ping", "I'm", "a", "little", "teapot"]`, for instance. We can then access any part of that array using `args[0]` to `args[4]`, which return the string in that array position. And if you want to be more precise and don't want `args` to contain the `command`, you can just remove it from the array: `let args = msg.content.split(" ").slice(1);`. 
+This generates an array that would look like `["!ping", "I'm", "a", "little", "teapot"]`, for instance. We can then access any part of that array using `args[0]` to `args[4]`, which return the string in that array position. And if you want to be more precise and don't want `args` to contain the `command`, you can just remove it from the array: `let args = message.content.split(" ").slice(1);`. 
 
 > For more information on arrays, see [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
 If you want, you can then specify argument *names* by referring to the array positions: 
 
 ```js
-if (msg.content.startsWith(prefix + "asl")) {
-  let args = msg.content.split(" ").slice(1);
+if (message.content.startsWith(prefix + "asl")) {
+  let args = message.content.split(" ").slice(1);
   let age = args[0]; // yes, start at 0, not 1. I hate that too.
   let sex = args[1];
   let location = args[2];
-  bot.reply(msg, `Hello ${msg.author.name}, I see you're a ${age} year old ${sex} from ${location}. Wanna date?`);
+  message.reply(`Hello ${message.author.name}, I see you're a ${age} year old ${sex} from ${location}. Wanna date?`);
 } 
 ```
 
 And if you want to be **really** fancy with ECMAScript 6, here's an awesome one (requires Node 6!):
 ```js
-if (msg.content.startsWith(prefix + "asl")) {
-  let [age, sex, location] = msg.content.split(" ").slice(1);
-  bot.reply(msg, `Hello ${msg.author.name}, I see you're a ${age} year old ${sex} from ${location}. Wanna date?`);
+if (message.content.startsWith(prefix + "asl")) {
+  let [age, sex, location] = message.content.split(" ").slice(1);
+  message.reply(`Hello ${message.author.name}, I see you're a ${age} year old ${sex} from ${location}. Wanna date?`);
 } 
 ```
 
@@ -61,10 +61,10 @@ Let's build a quick and dirty `kick` command, then.
 
 ```js
 // Kick a single user in the mention
-if (msg.content.startsWith(prefix + "kick")) {
+if (message.content.startsWith(prefix + "kick")) {
   // I'll make a code example on how to check if the user is allowed, one day!
-  let userToKick = msg.mentions[0];
-  bot.kickMember(userToKick, msg.server).catch(console.error);
+  let userToKick = message.mentions.users.first();
+  userToKick.kick().catch(console.error);
   // see I even catch the error!
 } 
 ```
@@ -74,8 +74,8 @@ If you want to support *multiple* mentions, then you'll have to loop through eac
 ```js
 if (msg.content.startsWith(prefix + "kick")) {
   // I'll make a code example on how to check if the user is allowed, one day!
-  msg.mentions.map( (user) => {
-    bot.kickMember(user, msg.server).catch(console.error);
+  message.mentions.users.map( (user) => {
+    userToKick.kick().catch(console.error);
   });
   // Yes that's right, I'm using ECMAScript 6 to confuse you again.
 } 
@@ -90,12 +90,15 @@ Let's say you want to have a command that creates a new role. To be honest I wou
 We'll give the role command 3 arguments: A role *name*, a role *color* and whether the role is *hoisted* (aka, shows separately in the user list). The order of these arguments is important here: *hoisted* and *color* will always be one word, but the role *name* can be variable. "Bot Commander" "Admin People", "Eternal Noobs" are all valid role names. So let's handle them right!
 
 ```js
-if (msg.content.startsWith(prefix + "newrole")) {
-  let args = msg.content.split(" ").slice(1);
+if (message.content.startsWith(prefix + "newrole")) {
+  let args = message.content.split(" ").slice(1);
   let color = args[0];
   let hoist = args[1] === "yes" || args[1] === "true" ? true : false; // google "ternary if javascript"
   let rolename = args.slice(2).join(" "); // remove first 2 args, then join array with a space
-  bot.createRole(msg.server, {hoist: hoist, name: rolename, color: color}).catch(console.error);
+  guild.createRole()
+  .then( newrole => {
+    newrole.edit({hoist: hoist, name: rolename, color: color})
+  }).catch(console.error);
 } 
 ```
 
@@ -110,9 +113,12 @@ To use this command, a user would do something like: `!newrole 0000FF yes Eterna
 Destructuring has a `...rest` feature that lets you take "the rest of the array" and put it in a single variable. Similarly to the above shortened version, you could thus do:
 
 ```js
-if (msg.content.startsWith(prefix + "newrole")) {
-  let [color, hoist, ...rolename] = msg.content.split(" ").slice(1);
+if (message.content.startsWith(prefix + "newrole")) {
+  let [color, hoist, ...rolename] = message.content.split(" ").slice(1);
   hoist = hoist === "yes" || hoist === "true" ? true : false; // Still gotta do this check!
-  bot.createRole(msg.server, {hoist: hoist, name: rolename, color: "0x"+color}).catch(console.error);
+  guild.createRole()
+  .then( newrole => {
+    newrole.edit({hoist: hoist, name: rolename, color: color})
+  }).catch(console.error);
 } 
 ```
