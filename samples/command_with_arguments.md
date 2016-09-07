@@ -63,8 +63,9 @@ Let's build a quick and dirty `kick` command, then.
 // Kick a single user in the mention
 if (message.content.startsWith(prefix + "kick")) {
   // I'll make a code example on how to check if the user is allowed, one day!
-  let userToKick = message.mentions.users.first();
-  userToKick.kick().catch(console.error);
+    let userToKick = message.mentions.users.first();
+    //we need to get a *GuildMember* object, mentions are only users. Then, we kick!
+    message.guild.member(userToKick).kick();
   // see I even catch the error!
 } 
 ```
