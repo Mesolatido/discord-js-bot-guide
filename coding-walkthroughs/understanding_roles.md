@@ -58,8 +58,14 @@ if( msg.member.roles.filter(r=>r.hasPermission('KICK_MEMBERS')).size > 0) {
 
 ### Get all permissions of a member on a channel
 
-> This is not currently doable. **we are working on it!**
+You can get a list of permissions for a user on any specific channel by using the following code:
+
+```js
+msg.channel.permissionsFor(msg.member)
+```
+
+This will give you the permissions `calculated for that channel`, which you can parse yourself, view with `msg.channel.permissionsFor(msg.member).serialize()`.
 
 ### Get all permissions of a member on a guild
 
-> Same dealy-o. Please stand by.
+> Currently, this is **not possible** because Discord does not provide this information. Neither does it provide *valid* position data for each role, making it impossible to calculate. Go complain on Discord Developpers! :D
