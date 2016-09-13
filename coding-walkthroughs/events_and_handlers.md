@@ -63,6 +63,7 @@ The following small bit of code (which can be anywhere in your file, such as rig
 
 ```js
 bot.on('error', e => { console.error(e); });
-bot.on('warn', e => { console.warn(e); });
-bot.on('debug', e => { console.info(e); });
+// these have not yet been re-added afaik
+//bot.on('warn', e => { console.warn(e); });
+// bot.on('debug', e => { console.info(e); });
 ```
