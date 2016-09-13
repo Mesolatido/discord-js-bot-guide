@@ -151,7 +151,7 @@ Once you're done with this basic bot, there's a couple of things you should take
 
 ### References and Information
 - [Understanding Events and Handlers](events_and_handlers.md) gives you more details about events (things that trigger code) and handlers (the code that triggers).
-- [Understanding Resolvables](understanding-resolvables.md) is an important overview of resolvables and caches.
+- [Understanding Roles](understanding_roles.md) is an important overview of Roles and Collections.
 
 ### More code samples
 For more code samples you can use in your bot, check out:
@@ -159,4 +159,4 @@ For more code samples you can use in your bot, check out:
 - [Welcome Message every X users](samples/welcome_message_every_x_users.md) : it's easy to welcome users as they come in, but can you do it every 10 users? I'll show you how.
 - [Message Reply Array](samples/message_reply_array.md) : instead of a dozen conditions with simple text replies, we'll use an array to make things easier to look at and add to!
 - [Command with Arguments](samples/command_with_arguments.md) : How do I do `!echo a message` or `!kick @xXx_phantom_sniper_xXx`? Follow this to learn how.
-- [Selfbots, the Awesomest thing in the universe](samples/selfbots,_the_awesomest_thing_in_the_universe.md) : If you want to use lenny make personal tags just like me, follow along, young apprentice.
+- [Selfbots, the Awesomest thing in the universe](samples/selfbots_are_awesome.md) : If you want to use lenny make personal tags just like me, follow along, young apprentice.
