@@ -133,4 +133,8 @@ bot.on("message", message => {
 });
 ```
 
-### More examples... to come later! =D
+### A complete implementation
+
+The examples above are from my own personal selfbot. For your viewing pleasure I have uploaded it to github and will continue to update it as I use it and add more features. 
+
+[Root's Selfbot](https://github.com/eslachance/djs-selfbot-v9) > Have fun!
