@@ -13,24 +13,24 @@ Initializing the discord collection is simple: `var newUsers = new Discord.Colle
 Adding new members that join to the collection is simple:
 
 ```js
-bot.on("guildMemberAdd", (guild, user) => {
-  newUsers.set(user.id, user);
+bot.on("guildMemberAdd", (guild, member) => {
+  newUsers.set(member.user.id, member.user);
 });
 ```
 
 If a user leaves while he's on that list though, it would cause your bot to welcome @invalid-user. To fix this, we remove that user from the collection: 
 
 ```js
-bot.on("guildMemberRemove", (guild, user) => {
-  if(newUsers.exists("id", user.id)) newUsers.delete(user.id);
+bot.on("guildMemberRemove", (guild, member) => {
+  if(newUsers.exists("id", member.user.id)) newUsers.delete(member.user.id);
 });
 ```
 
 But wait, where do we welcome users? That's done in `serverNewMember`, when the count reaches the number you want: 
 
 ```js
-bot.on("guildMemberAdd", (guild, user) => {
-  newUsers.set(user.id, user);
+bot.on("guildMemberAdd", (guild, member) => {
+  newUsers.set(member.user.id, member.user);
 
   if(newUsers.size > 10) {
     var userlist = newUsers.map(u => u.mention()).join(" ");
@@ -52,13 +52,13 @@ The only issue with the above code is that it would only work if your bot is on 
 'use strict'; // enables ES6 syntax
 
 const Discord = require('discord.js');
-const bot = new Discord.Client({autoReconnect: true});
+const bot = new Discord.Client();
 
 const newUsers = [];
 
-bot.on("guildMemberAdd", (guild, user) => {
+bot.on("guildMemberAdd", (guild, member) => {
   if(!newUsers[guild.id]) newUsers[guild.id] = new Discord.Collection();
-  newUsers[guild.id].add(user);
+  newUsers[guild.id].set(member.user.id, member.user);
 
   if(newUsers[guild.id].size > 10) {
     var userlist = newUsers[guild.id].map(u => u.mention()).join(" ");
@@ -66,11 +66,11 @@ bot.on("guildMemberAdd", (guild, user) => {
     newUsers[guild.id] = new Discord.Collection();
   }
 
-bot.on("guildMemberRemove", (guild, user) => {
-  if(newUsers[guild.id].exists("id", user.id)) newUsers.delete(user.id);
+bot.on("guildMemberRemove", (guild, member) => {
+  if(newUsers[guild.id].exists("id", member.user.id)) newUsers.delete(member.user.id);
 });
 
 });
 
-bot.loginWithToken("Your.Token");
+bot.login("Your.Token");
 ```
