@@ -10,7 +10,19 @@ Let's start with a basic overview of the hierarchy of roles in Discord.
 
 ## Some code!
 
-Let's get down to the brass tax. You want to know how to use roles and permissions in your bot. Well, it's 1AM and I really want to get this info written down, but I promise to make some examples soon™
+Let's get down to the brass tax. You want to know how to use roles and permissions in your bot.
+
+### Get Role by Name or ID
+
+This is the "easy" part once you actually get used to it. It's just like getting any other Collection element, but here's a reminder anyway!
+
+```js
+// get role by ID
+let myRole = msg.guild.roles.get("222089067028807682");
+
+// get role by name
+let myRole = msg.guild.roles.find("name", "Mods");
+```
 
 ### Check if a member has a role
 In a `message` handler, you have access to checking the GuildMember class of the message author:
@@ -41,8 +53,14 @@ console.log(`Got ${membersWithRole.size} members with that role.`);
 To check for a single permission override on a channel:
 
 ```js
+// Getting all permissions for a member on a channel.
+let perms = msg.channel.permissionsFor(msg.member);
+
 // Checks for Manage Messages permissions.
-msg.channel.permissionsFor(msg.author).hasPermission('MANAGE_MESSAGES')
+let can_manage_chans = msg.channel.permissionsFor(msg.member).hasPermission("MANAGE_CHANNELS");
+
+// View permissions as an object (useful for debugging or eval)
+msg.channel.permissionsFor(msg.member).serialize()
 ```
 
 ### Check specific permission of a member on a server
@@ -55,17 +73,6 @@ if( msg.member.roles.filter(r=>r.hasPermission('KICK_MEMBERS')).size > 0) {
   console.log(`No Perm For U`);
 }
 ```
-
-### Get all permissions of a member on a channel
-
-You can get a list of permissions for a user on any specific channel by using the following code:
-
-```js
-let perms = msg.channel.permissionsFor(msg.member);
-let can_manage_chans = msg.channel.permissionsFor(msg.member).hasPermission("MANAGE_CHANNELS");
-```
-
-This will give you the permissions `calculated for that channel`, which you can parse yourself, view with `msg.channel.permissionsFor(msg.member).serialize()`.
 
 ### Get all permissions of a member on a guild
 
