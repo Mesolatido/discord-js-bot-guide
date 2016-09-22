@@ -52,7 +52,7 @@ With that warning out of the way, on to the next step. The Secret Token, as I ju
 
 This might go beyond saying but I'll say it anyway: You can't just start shoving bot code in notepad.exe and expect it to work. In order to use discord.js you will need a couple of things installed. At the very least:
 
- - Get Node.js. [Download for windows](https://nodejs.org/en/download/) or if you're on a linux distro, via [package manager](https://nodejs.org/en/download/package-manager/). 
+ - Get Node.js version 6.X (earlier versions are not supported). [Download for windows](https://nodejs.org/en/download/) or if you're on a linux distro, via [package manager](https://nodejs.org/en/download/package-manager/). 
  - Get an actual code editor. Don't use notepad or notepad++, they are not sufficient. [VS Code](https://www.visualstudio.com/en-us/products/code-vs.aspx) , [Sublime Text 3](https://www.sublimetext.com/3) and [Atom](https://atom.io/) are often recommended.
 
 > An alternative: [c9.io](https://c9.io/). I personally appreciate c9.io as it's a full VPS with a great editor (Ace) and installing node, discord.js and all dependencies, then running the bot, is easy. You can't host it there, but you can certainly develop there. *This is not an endorsement*. 
