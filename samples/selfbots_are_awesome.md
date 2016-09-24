@@ -61,7 +61,7 @@ Here are a few useful examples of commands that I like to use.
 
 A *Prune* command is used to delete your own messages from the channel you're on. Since there is no way for any server owner to prevent you from deleting or editing your own messages, this will always work. The command is called as `/prune X` where 99 is the maximum number of messages to remove, and the prefix depends on your own prefix.
 
-> `getChannelLogs()` is limited to 100 messages total, and gets *all* the messages and not just your own. This means you will probably never be able to delete 100 messages since they'll be mixed in with other people's. I generally don't use it to prune more than 10 messages anyway.
+> `fetchMessages()` is limited to 100 messages total, and gets *all* the messages and not just your own. This means you will probably never be able to delete 100 messages since they'll be mixed in with other people's. I generally don't use it to prune more than 10 messages anyway.
 
 ```js
 bot.on("message", message => {
