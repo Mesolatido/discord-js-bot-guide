@@ -57,7 +57,7 @@ To check for a single permission override on a channel:
 let perms = msg.channel.permissionsFor(msg.member);
 
 // Checks for Manage Messages permissions.
-let can_manage_chans = msg.channel.permissionsFor(msg.member).hasPermission("MANAGE_CHANNELS");
+let can_manage_chans = msg.channel.permissionsFor(msg.member).hasPermission("MANAGE_MESSAGES");
 
 // View permissions as an object (useful for debugging or eval)
 msg.channel.permissionsFor(msg.member).serialize()
