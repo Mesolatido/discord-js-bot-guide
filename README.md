@@ -23,11 +23,11 @@ Yes, this guide takes a lot of my time to write. Yes, I would appreciate some do
 
 I will update this guide with each new version of discord.js, as time permits. However, I will gladly accept any contributions to this guide as long as they maintain an appropriate level of grammar and vocabulary. Please don't hesitate to contribute!
 
-Current Discord.js Version: `9.0.2` 
+Last Updated: `9/5/2016`
+
+On Version: `9.3.0` 
 
 > Since discord.js v9 is a complete rewrite, code found here is not compatible with version 8!
-
-Last Updated: `9/5/2016`
 
 ## Special Thanks
 
