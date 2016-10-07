@@ -65,7 +65,7 @@ And now ready for the next step!
 
 So you have your CLI ready to go, in an empty folder, and you just wanna start coding. Alright, hold on one last second: let's install discord.js first. We do this using the Node Package Manager, or NPM: 
 
-`npm install discord.js`
+`npm install discord.js@8.2.0`
 
 This will take a couple of heartbeats and display a lot of things on screen. Unless you have a big fat red message saying it didn't work, or package not found, or whatever, you're good to go. If you look at your folder, you'll notice that there's a new folder created here: `node_modules` . This contains all the installed packages for your project. 
 
