@@ -16,11 +16,11 @@ Yes, this guide takes a lot of my time to write. Yes, I would appreciate some do
 
 I will update this guide with each new version of discord.js, as time permits. However, I will gladly accept any contributions to this guide as long as they maintain an appropriate level of grammar and vocabulary. Please don't hesitate to contribute!
 
-Current Discord Version: `8.1.0` 
+Latest Legacy Version: `8.2.0` 
 
 > As `Discord.js` is currently in Alpha for a **rewrite** please note that this guide does **not** apply to the rewrite.
 
-Last Updated: `8/18/2016`
+Last Updated: `10/07/2016`
 
 ## Special Thanks
 
