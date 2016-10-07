@@ -25,7 +25,7 @@ If you need sound support, add the following:
 Once you have this all installed, create a folder for your project and install discord.js: 
 
 `mkdir mybot && cd mybot`
-`npm install discord.js`
+`npm install discord.js@8.2.0`
 
 ## Example Code
 
