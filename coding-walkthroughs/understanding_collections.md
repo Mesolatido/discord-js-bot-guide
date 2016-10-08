@@ -15,7 +15,7 @@ Examples of Collections include:
 
 ## Getting by ID
 
-Very simply, to get anything by ID you can use `Collection.get(id)`. For instance, getting a channel can be `bot.channel.get("81385020756865024")`. Getting a user is also trivial: `bot.users.get("139412744439988224")`
+Very simply, to get anything by ID you can use `Collection.get(id)`. For instance, getting a channel can be `bot.channels.get("81385020756865024")`. Getting a user is also trivial: `bot.users.get("139412744439988224")`
 
 ## Finding by key
 
