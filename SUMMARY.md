@@ -17,5 +17,5 @@
    * [Message Reply Array](samples/message_reply_array.md)
    * [Command with arguments](samples/command_with_arguments.md)
    * [Selfbots, the greatest thing in the universe](samples/selfbots_are_awesome.md)
-   * [Making an Eval command](samples/making-an-eval-command.md)
+   * [Making an Eval command](samples/making-an-eval-commandmd.md)
 
