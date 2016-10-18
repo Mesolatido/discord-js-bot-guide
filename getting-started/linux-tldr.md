@@ -14,7 +14,7 @@
 
 Install the following through your package manager: 
 
- - nodejs (version 4 or 6 recommended, see [here](https://nodejs.org/en/download/package-manager/))
+ - nodejs (Version 6.X and higher required, see [here](https://nodejs.org/en/download/package-manager/))
 
 If you need sound support, add the following: 
 
