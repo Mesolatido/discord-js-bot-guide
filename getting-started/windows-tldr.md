@@ -14,7 +14,7 @@
 
 Install the following software in Windows: 
 
- - nodejs from [the downloads page](https://nodejs.org/en/download/)
+ - nodejs from [the downloads page](https://nodejs.org/en/download/) (Version 6.X and higher required)
 
 If you need sound support, you'll need 2 more things: 
 
