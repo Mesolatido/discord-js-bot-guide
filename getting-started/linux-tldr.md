@@ -56,4 +56,4 @@ If no errors are shown, the bot should join the server(s) you added it to.
 
  - [Discord.js Examples](https://github.com/hydrabolt/discord.js/tree/master/docs/custom/examples) : Structured, useful examples of bots with one or more commands.
  - [Discord.js Documentation](http://discord.js.org/) : Full API reference for discord.js
- - [Discord API server](https://discord.gg/seraph-leblanc-oracle): Join us on #node_discord-js
+ - [Discord.JS Official Server](https://discord.gg/seraph-leblanc-oracle): Join us on #node_discord-js
