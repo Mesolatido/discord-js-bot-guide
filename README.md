@@ -1,4 +1,4 @@
-# Discord.js Getting Started (9.x)
+# Discord.js Getting Started (10.x)
 
 ## Introduction
 
@@ -23,11 +23,9 @@ Yes, this guide takes a lot of my time to write. Yes, I would appreciate some do
 
 I will update this guide with each new version of discord.js, as time permits. However, I will gladly accept any contributions to this guide as long as they maintain an appropriate level of grammar and vocabulary. Please don't hesitate to contribute!
 
-Last Updated: `9/5/2016`
+Last Updated: `12/05/2016`
 
-On Version: `9.3.0` 
-
-> Since discord.js v9 is a complete rewrite, code found here is not compatible with version 8!
+On Version: `10.0.1` 
 
 ## Special Thanks
 
