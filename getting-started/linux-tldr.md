@@ -8,7 +8,7 @@
  - Create a **New Application**, and give it a name
  - Click **Create a bot account**, then **Yes, do it**
  - Visit https://discordapp.com/oauth2/authorize?client_id=APP_ID&scope=bot , replacing **APP_ID** with the **Client/Application ID** from the app page, to add the bot to your server (or ask a server admin to do it for you).
- - Copy your bot's **Secret Token** and keep it for later
+ - Copy your bot's **Token** and keep it for later
 
 ## Pre-requisite software
 
