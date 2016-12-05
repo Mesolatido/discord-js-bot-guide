@@ -16,16 +16,12 @@ Install the following through your package manager:
 
  - nodejs (Version 6.X and higher required, see [here](https://nodejs.org/en/download/package-manager/))
 
-If you need sound support, add the following: 
-
-- python 2.7.x
-- ffmpeg
-- build-essential
-
 Once you have this all installed, create a folder for your project and install discord.js: 
 
 `mkdir mybot && cd mybot`
-`npm install hydrabolt/discord.js#indev-rewrite`
+`npm install discord.js`
+
+**For sound support** add `npm install opusscript` (ez mode) or `npm install node-opus` (better performance but requires `python 2.7.x` and `build-essential`). BOTH these options require `ffmpeg` to run on your system, installed through `sudo apt-get install ffmpeg`.
 
 ## Example Code
 
@@ -58,6 +54,6 @@ If no errors are shown, the bot should join the server(s) you added it to.
 
 ## Resources
 
- - [Discord.js Examples](https://github.com/hydrabolt/discord.js/tree/master/examples) : Structured, useful examples of bots with one or more commands.
- - [Discord.js Documentation](http://discordjs.readthedocs.io/en/latest/index.html) : Full API reference for discord.js
+ - [Discord.js Examples](https://github.com/hydrabolt/discord.js/tree/master/docs/custom/examples) : Structured, useful examples of bots with one or more commands.
+ - [Discord.js Documentation](http://discord.js.org/) : Full API reference for discord.js
  - [Discord API server](https://discord.gg/seraph-leblanc-oracle): Join us on #node_discord-js
