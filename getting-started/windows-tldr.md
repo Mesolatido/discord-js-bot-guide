@@ -28,7 +28,7 @@ Once you have this all installed, create a folder for your project and install d
 
 `md mybot`
 `cd mybot`
-`npm install hydrabolt/discord.js#indev-rewrite`
+`npm install discord.js`
 
 ## Example Code
 
