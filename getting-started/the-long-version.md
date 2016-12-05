@@ -65,7 +65,7 @@ And now ready for the next step!
 
 So you have your CLI ready to go, in an empty folder, and you just wanna start coding. Alright, hold on one last second: let's install discord.js first. We do this using the Node Package Manager, or NPM: 
 
-`npm i --save --no-optional discord.js`
+`npm i --save discord.js`
 
 This will take a couple of heartbeats and display a lot of things on screen. Unless you have a big fat red message saying it didn't work, or package not found, or whatever, you're good to go. If you look at your folder, you'll notice that there's a new folder created here: `node_modules` . This contains all the installed packages for your project. 
 
@@ -114,6 +114,6 @@ Now that you have a basic, functional bot, it's time to start adding new feature
 ## Addendum: Getting help and Support
 Before you start getting support from Discord servers to help you with your bot, I strongly advise taking a look at the following, very useful, resources. 
 
- - [Discord.js Documentation](http://discordjs.readthedocs.io/en/latest/index.html) : For the love of all that is (un)holy, **read the documentation**. Yes, it will be alien at first if you are not used to "developer documentation" but it contains a whole lot of information about each and every feature of the API. Combine this with the examples above to see the API in context.
+ - [Discord.js Documentation](http://discord.js.org) : For the love of all that is (un)holy, **read the documentation**. Yes, it will be alien at first if you are not used to "developer documentation" but it contains a whole lot of information about each and every feature of the API. Combine this with the examples above to see the API in context.
 
 If you have any issue with your code *that is not due to you being inexperienced in Javascript*, you may join the [Discord.js API official server](https://discord.gg/seraph-leblanc-oracle). The #node_discord-js channel on this server is there to help you with basic troubleshooting and complex implementation issues. We try to be helpful, but please understand that we're not there to teach you JavaScript. 
