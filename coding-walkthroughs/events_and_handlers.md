@@ -42,9 +42,9 @@ I have this in all my bots, in various forms. If you need to loop across all you
 Another useful event is [`guildMemberAdd`](http://hydrabolt.github.io/discord.js/#!/docs/tag/indev/class/Client?scrollto=guildMemberAdd) which triggers whenever someone joins any of the servers the bot is on. You'll see this on smaller servers: a bot welcomes every new member in the #general channel. The following code does this.
 
 ```js
-bot.on("guildMemberAdd", (guild, member) => {
-	console.log(`New User "${member.user.username}" has joined "${guild.name}"` );
-	guild.defaultChannel.sendMessage(`"${member.user.username}" has joined this server`);
+bot.on("guildMemberAdd", (member) => {
+	console.log(`New User "${member.user.username}" has joined "${member.guild.name}"` );
+	member.guild.defaultChannel.sendMessage(`"${member.user.username}" has joined this server`);
 });
 ```
 
