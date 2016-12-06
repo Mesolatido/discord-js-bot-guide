@@ -72,7 +72,7 @@ Alright I feel like I have to add a *little* precision here on implementation:
 
 - You can **not** add or remove a role that is higher than the bot's. This should be obvious. 
 - The bot requires MANAGE_ROLES permissions for this. You can check for it using the code further down this page.
-- Because of global rate limits, you cannot do 2 role "actions" immediately one after the other. The first action will work, the second will not. You can go around that by using `<GuildMember>.setRoles([array, of, roles])`. This will overwrite all existing roles and only apply the ones in the array so be careful with it.
+- Because of global rate limits, you cannot do 2 role "actions" immediately one after the other. The first action will work, the second will not. You can go around that by using `<GuildMember>.setRoles([array, of, roles])`. This will overwrite all existing roles and only apply the ones in the array so be careful with it. 
 
 ## Permission code
 
