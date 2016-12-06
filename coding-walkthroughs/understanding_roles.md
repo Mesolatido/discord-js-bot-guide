@@ -8,7 +8,7 @@ Let's start with a basic overview of the hierarchy of roles in Discord.
 
 ... or actually not, they already explain it better than I care to: [Role Management 101](https://support.discordapp.com/hc/en-us/articles/214836687-Role-Management-101). Read up on that, then come back here. I'll wait. (Yeah I know that's cheesy, so sue me).
 
-## Some code!
+## Role code
 
 Let's get down to the brass tax. You want to know how to use roles and permissions in your bot.
 
@@ -45,9 +45,36 @@ You can get a list of members in your guild that have a specific role by filteri
 
 ```js
 let roleID = "216219836957720576";
-let membersWithRole = msg.guild.members.filter(m=> m.roles.has(roleID))
+let membersWithRole = msg.guild.roles.get(roleID).members;
 console.log(`Got ${membersWithRole.size} members with that role.`);
 ```
+
+### Add a member to a role
+
+Alright, now that you have roles, you probably want to add a member to a role. Simple enough! Discord.js provides 2 handy methods to add, and remove, a role. Let's look at them!
+
+```js
+let role = msg.guild.roles.get("name", "Team Mystic");
+
+// Let's pretend you mentioned the user you want to add a role to (!addrole @user Role Name):
+let member = msg.guild.member(msg.mentions.users.first());
+
+// or the person who made the command: let member = msg.member;
+
+// Add the role!
+member.addRole(role).catch(console.error);
+
+// Remove a role!
+member.removeRole(role).catch(console.error);
+```
+
+Alright I feel like I have to add a *little* precision here on implementation: 
+
+- You can **not** add or remove a role that is higher than the bot's. This should be obvious. 
+- The bot requires MANAGE_ROLES permissions for this. You can check for it using the code further down this page.
+- Because of global rate limits, you cannot do 2 role "actions" immediately one after the other. The first action will work, the second will not. You can go around that by using `<GuildMember>.setRoles([array, of, roles])`. This will overwrite all existing roles and only apply the ones in the array so be careful with it.
+
+## Permission code
 
 ### Check specific permission of a member on a channel
 To check for a single permission override on a channel:
