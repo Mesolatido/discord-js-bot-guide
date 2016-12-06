@@ -51,7 +51,7 @@ Alright, So let's get down to the brass tax: The actual eval command. Here it is
 ```js
 bot.on('message', message => {
   let params = message.split(" ").splice(1);
-  if(message.startsWith(prefix+"eval") {
+  if(message.content.startsWith(prefix+"eval") {
     try {
       var code = params.join(" ");
       var evaled = eval(code);
@@ -61,7 +61,7 @@ bot.on('message', message => {
       
       message.channel.sendCode("xl", clean(evaled));   
     } catch(err) {
-      message.channel.sendMessage(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\`");
+      message.channel.sendMessage(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
     }
   }
 }
