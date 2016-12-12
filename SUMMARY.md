@@ -18,5 +18,4 @@
     * [Command with arguments](samples/command_with_arguments.md)
     * [Selfbots, the greatest thing in the universe](samples/selfbots_are_awesome.md)
     * [Making an Eval command](samples/making-an-eval-command.md)
-* [Temporary](temporary.md)
 
