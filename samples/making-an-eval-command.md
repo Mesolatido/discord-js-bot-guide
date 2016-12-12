@@ -51,7 +51,10 @@ Alright, So let's get down to the brass tax: The actual eval command. Here it is
 
 ```js
 bot.on('message', message => {
-  let params = message.split(" ").splice(1);
+  const prefix = "+";
+  const params = msg.content.split(" ");
+  const command = args.shift().slice(prefix.length);
+
   if(message.content.startsWith(prefix+"eval")) {
     try {
       var code = params.join(" ");
