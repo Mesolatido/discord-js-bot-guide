@@ -52,7 +52,7 @@ Two lines require a little more explanation:
 The only issue with the above code is that it would only work if your bot is on a single server. Though this might be alright you, there's a chance you want to support multiple servers. How do we do that? We change `newUsers` to an `Array` instead, and each server gets its own cache. Here is a **complete** example that does nothing but welcome new users:
 
 ```js
-const Discord = require('discord.js');
+const Discord = require('discord.js'); 
 const bot = new Discord.Client();
 
 const newUsers = [];
