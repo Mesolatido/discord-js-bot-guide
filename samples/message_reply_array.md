@@ -38,7 +38,7 @@ bot.on('message', (message) => {
   if(responseObject[message.content]) {
     message.channel.sendMessage(responseObject[message.content]);
   }
-}
+});
 ```
 
 That code basically says: "If you find the message content to be a key of the responseObject, send a message containing that key's value". 
