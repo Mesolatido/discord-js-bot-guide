@@ -54,7 +54,7 @@ console.log(`Got ${membersWithRole.size} members with that role.`);
 Alright, now that you have roles, you probably want to add a member to a role. Simple enough! Discord.js provides 2 handy methods to add, and remove, a role. Let's look at them!
 
 ```js
-let role = msg.guild.roles.get("name", "Team Mystic");
+let role = msg.guild.roles.find("name", "Team Mystic");
 
 // Let's pretend you mentioned the user you want to add a role to (!addrole @user Role Name):
 let member = msg.guild.member(msg.mentions.users.first());
@@ -90,23 +90,14 @@ let can_manage_chans = msg.channel.permissionsFor(msg.member).hasPermission("MAN
 msg.channel.permissionsFor(msg.member).serialize()
 ```
 
-### Check specific permission of a member on a server
-At the moment there is no easy helper to check for a specific permission. While we work on that, here's a longer/manual way:
-
-```js
-if( msg.member.roles.filter(r=>r.hasPermission('KICK_MEMBERS')).size > 0) {
-  console.log(`Member has the KICK_MEMBERS permissions! Kick away!`);
-} else {
-  console.log(`No Perm For U`);
-}
-```
-
 ### Get all permissions of a member on a guild
 
 Just as easy, wooh! 
 
 ```js
 let perms = msg.member.permissions;
+
+// Check if a member has a specific permission on the guild!
 let has_kick = msg.member.hasPermission("KICK_MEMBERS");
 ```
 
