@@ -46,10 +46,13 @@ This condition says: "if the author of the message is **not** the bot user, stop
 The second difference, is how the bot logs in. To log a regular bot, you grab the Bot Token from the Applications Page, then put it in the `bot.login()` function.
 
 In the case of a selfbot, this token can be obtained from the Discord application, from the Console:
+
 1. From either the web application, or the installed Discord app, use the **CTRL+SHIFT+I** keyboard shortcut.
-2. This brings up the **Developer Tools**. Go to the **Console** tab
-3. Type the following in the console and press *Enter*: `localStorage.token`
-4. Copy the token that appears and **PLEASE DO NOT SHARE IT WITH ANYONE, EVER**. 
+2. This brings up the **Developer Tools**. Go to the **Application** tab
+3. On the left, expand **Storage**, then click on the desktopapp.com entry (it should be the only one).
+4. Locate the entry called `token`, and copy it.
+
+**KEEP YOUR TOKEN SECRET, AND NEVER SHARE IT WITH ANYONE**
 
 I've already covered why Bot Tokens should remain secret in the [Getting Started](../getting-started/the-long-version.md) guide. But this is **even more** critical. If someone gets a hold your personal token, **they are you**. They can pretend to be you, send messages as you. **They can also massively fuck up any server where you have permissions**. Like transfer server control to themselves. Have I stated clearly enough that you should be careful with your token? Ok, good!
 
