@@ -27,7 +27,7 @@ I don't care if it's a server owner, someone you've been talking to for months, 
 So how do you secure it? Simple: only allow use from your own user ID. So for example my user ID is `139412744439988224` so I check whether the message author's ID is mine:
 
 ```js
-if(!msg.author.id === "139412744439988224") return;
+if(msg.author.id !== "139412744439988224") return;
 ```
 
 It's as simple as that to protect the command directly inside of your condition or file or whatever. Of course, if you have some sort of command handler there's most likely a way to restrict to an ID too. This isn't specific to discord.js : there's always a way to do this. If there isn't \(if a command handler won't let you restrict by ID\), then you're using the **wrong lib**.
