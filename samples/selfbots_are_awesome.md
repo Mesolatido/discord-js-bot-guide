@@ -49,8 +49,10 @@ In the case of a selfbot, this token can be obtained from the Discord applicatio
 
 1. From either the web application, or the installed Discord app, use the **CTRL+SHIFT+I** keyboard shortcut.
 2. This brings up the **Developer Tools**. Go to the **Application** tab
-3. On the left, expand **Storage**, then click on the desktopapp.com entry (it should be the only one).
+3. On the left, expand **Local Storage**, then click on the discordapp.com entry (it should be the only one).
 4. Locate the entry called `token`, and copy it.
+
+![](https://cdn.discordapp.com/attachments/222079895583457280/269164273152819200/user-token.gif)
 
 **KEEP YOUR TOKEN SECRET, AND NEVER SHARE IT WITH ANYONE**
 
