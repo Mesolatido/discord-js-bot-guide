@@ -23,9 +23,9 @@ On Version: `11.0.1`
 
 ## Special Thanks
 
-I'd like to extend my thanks to all the regular users of the Discord API server for their help in learning discord.js. They have been a great source of knowledge and examples as well as patient with my derps. Thanks guys.
+I'd like to extend my thanks to the Discord API and Discord.js Official servers for their help in learning discord.js. They have been a great source of knowledge and examples as well as patient with my derps. Thanks guys.
 
-Thanks to:
+Also, major thanks to:
 - @hydrabolt for making this awesome lib in the first place and keeping with it
 - @Gawdl3y for awesome contributions and tolerating my smelly butt
-- @Gus for writing awesome code inbetween extreme trolling.
+- @Gus for writing awesome code in between extreme trolling.
