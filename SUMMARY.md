@@ -8,6 +8,7 @@
     * [Installing and Using a proper editor](getting-started/installing_and_using_a_proper_editor.md)
 * Coding Walkthrough
     * [Your First Bot](coding-walkthroughs/your_basic_bot.md)
+    * [Adding a config.json file](adding-a-configjson-file.md)
     * [Understanding Events and Handlers](coding-walkthroughs/events_and_handlers.md)
     * [Understanding Collections](coding-walkthroughs/understanding_collections.md)
     * [Understanding Roles](coding-walkthroughs/understanding_roles.md)

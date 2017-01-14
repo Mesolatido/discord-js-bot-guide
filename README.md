@@ -23,12 +23,15 @@ Yes, this guide takes a lot of my time to write. Yes, I would appreciate some do
 
 I will update this guide with each new version of discord.js, as time permits. However, I will gladly accept any contributions to this guide as long as they maintain an appropriate level of grammar and vocabulary. Please don't hesitate to contribute!
 
-Last Updated: `12/05/2016`
+Last Updated: `2017/01/14`
 
-On Version: `10.0.1` 
+On Version: `11.0.1` 
 
 ## Special Thanks
 
 I'd like to extend my thanks to all the regular users of the Discord API server for their help in learning discord.js. They have been a great source of knowledge and examples as well as patient with my derps. Thanks guys.
 
-Also, @hydrabolt , you are awesome, this is a great lib and an even better rewrite!
+Thanks to:
+- @hydrabolt for making this awesome lib in the first place and keeping with it
+- @Gawdl3y for awesome contributions and tolerating my smelly butt
+- @Gus for writing awesome code inbetween extreme trolling.
