@@ -1,4 +1,6 @@
-# Discord.js Getting Started (10.x)
+# Discord.js Getting Started
+
+> **PLEASE NOTE THIS GUIDE WILL NO LONGER BE UPDATED DUE TO DRAMA**
 
 ## Introduction
 
@@ -15,17 +17,8 @@ If you have any questions after reading this guide please join us on the officia
 
 ## Updating of this guide
 
-I will update this guide with each new version of discord.js, as time permits. However, I will gladly accept any contributions to this guide as long as they maintain an appropriate level of grammar and vocabulary. Please don't hesitate to contribute!
+This guide is no longer being updated, for personal reasons. It will remain valid for Discord.js version 10 and 11, and perhaps a couple versions going forward, but I will no longer modify it or fix it.
 
 Last Updated: `2017/01/14`
 
 On Version: `11.0.1` 
-
-## Special Thanks
-
-I'd like to extend my thanks to the Discord API and Discord.js Official servers for their help in learning discord.js. They have been a great source of knowledge and examples as well as patient with my derps. Thanks guys.
-
-Also, major thanks to:
-- @hydrabolt for making this awesome lib in the first place and keeping with it
-- @Gawdl3y for awesome contributions and tolerating my smelly butt
-- @Gus for writing awesome code in between extreme trolling.

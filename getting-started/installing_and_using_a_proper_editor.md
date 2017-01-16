@@ -1,5 +1,8 @@
 # Installing and Using a proper editor
 
+> **PLEASE NOTE THIS GUIDE WILL NO LONGER BE UPDATED DUE TO DRAMA**
+
+
 Let's take a moment to appreciate the fact that the best code, is not just code that *works* but also code that is *readable*. And *readable* code is already easier to troubleshoot. To simplify the life of any code, a good editor is key. A good editor will tell you where your mistakes are, validate your code, give you best practices, and some will even run your code for you.
 
 In this tutorial we'll be looking at one such editor: Atom. Now, I'm not personally biased towards or away from Atom, but the editor, and some help from people who use it, were readily available, so this is the one I'm showing you.

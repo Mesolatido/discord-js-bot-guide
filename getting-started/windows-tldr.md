@@ -1,5 +1,8 @@
 # Getting Started with Discord.js
 
+> **PLEASE NOTE THIS GUIDE WILL NO LONGER BE UPDATED DUE TO DRAMA**
+
+
 > **This is the TL;DR version for Windows**. If you wish for a long version with more explanations, please see [this guide](the-long-version.html)
 
 ## Create App and Bot Account

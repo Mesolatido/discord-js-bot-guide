@@ -1,6 +1,8 @@
 # The Power of Eval
 
-> With great power comes great responsibility
+> **PLEASE NOTE THIS GUIDE WILL NO LONGER BE UPDATED DUE TO DRAMA**
+
+
 
 So, you've seen a lot of people on the Discord.js Official server use some sort of `eval` command. When they do, magical things happen - arbitrary javascript is executed and output is produced. MAGIC!
 

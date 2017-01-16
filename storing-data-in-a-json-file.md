@@ -1,5 +1,7 @@
 # Storing Data in a JSON file
 
+> **PLEASE NOTE THIS GUIDE WILL NO LONGER BE UPDATED DUE TO DRAMA**
+
 In this example we're going to read and write data to and from a JSON file. We'll keep is simple by using this JSON file for a points system. Yes, that's like Mee6 - admitedly that's a piece of shit bot, but people seem to love it so here we are.
 
 > **Note**: It should be noted that JSON is not the best storage system for this. It's prone to corruption if you do a lot of read/writes. We'll have an SQLite version coming up soon!

@@ -1,5 +1,7 @@
 # Selfbots, the greatest thing in the universe
 
+> **PLEASE NOTE THIS GUIDE WILL NO LONGER BE UPDATED DUE TO DRAMA**
+
 So, my friend, you are wondering what is a selfbot? Well let me tell you a little story.
 
 The first time you see it, you wonder what happened: someone typed for 2 seconds, and a wall of text appears as if by magic. Or something appears and then all of that person's messages disappear one after the other, relegated to `/dev/null` or some other weird place.

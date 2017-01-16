@@ -1,5 +1,8 @@
 # Getting Started with Discord.js
 
+> **PLEASE NOTE THIS GUIDE WILL NO LONGER BE UPDATED DUE TO DRAMA**
+
+
 So, you want to write a bot and you know some JavaScript, or maybe even node.js. You want to do cool things like a music bot, tag commands, random image searches, the whole shebang. Well you're at the right place!
 
 > **This is the long version** with a whole lot of useless blabbering text, jokes, and explanations. 

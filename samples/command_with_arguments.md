@@ -1,5 +1,7 @@
 # Command with arguments
 
+> **PLEASE NOTE THIS GUIDE WILL NO LONGER BE UPDATED DUE TO DRAMA**
+
 In [Your First Bot](../coding-walkthroughs/your_basic_bot.md), we explored how to make more than one command. These commands all started with a prefix, but didn't have any *arguments* : extra parameters used to vary what the command actually does.
 
 ## Creating an array of arguments

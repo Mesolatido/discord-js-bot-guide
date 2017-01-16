@@ -1,5 +1,7 @@
 # Understanding Collections
 
+> **PLEASE NOTE THIS GUIDE WILL NO LONGER BE UPDATED DUE TO DRAMA**
+
 In this page we will explore Collections, and how to use them to grab data from various part of the API.
 
 A **Collection** is a *utility class* that stores data. In *Discord.js 9.x*, they extend the *Map* data type with additional helpers to assist in retrieving information from them.
