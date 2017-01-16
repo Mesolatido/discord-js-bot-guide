@@ -33,7 +33,7 @@ const fs = require("fs");
 let points = JSON.parse(fs.readFileSync('./points.json', 'utf8'));
 ```
 
-So at this moment, we have an object called `points` from which we can read any property. So if we pretend for a second that we loaded the above example, we could access `points["139412744439988224"]` and that would return the number `42`. Great!
+So at this moment, we have an object called `points` from which we can read any property. So if we pretend for a second that we loaded the above example, we could access `points["139412744439988224"].points` and that would return the number `42`. Great!
 
 > You only need to read the file *once*, when originally loading your bot file, and then as you update it you're just writing to it. This is because the `points` object continues to be updated anyway, we're only using JSON for persistence between reboots!
 
