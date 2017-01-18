@@ -2,7 +2,7 @@
 Lemme tell you a story. Stay a while, and Listen!
 
 > **Update**: Los Discordos belongs to me again. The story has come full circle!
-
+ 
 ## The Beginning
 
 I joined Discord to start coding at the end of May 2016, just as much a noob as anybody else:
