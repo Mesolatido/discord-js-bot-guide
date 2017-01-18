@@ -1,6 +1,8 @@
 # Drama? What Drama?
 Lemme tell you a story. Stay a while, and Listen!
 
+> **Update**: Los Discordos belongs to me again. The story has come full circle!
+
 ## The Beginning
 
 I joined Discord to start coding at the end of May 2016, just as much a noob as anybody else:
@@ -52,7 +54,7 @@ And by the time I realized where I had gone wrong, by the time I actually looked
 
 I was cranky, easily triggered, had little patience with trolls and morons. Moreso than usual, and that's saying a lot. So when I started gaining confidence back in myself, and telling off the trolls in the staff that kept bashing me, I came across as very angry, and tensions arose. I felt more and more like I wasn't appreciated. And I felt like hydrabolt wasn't up to the task of defending my work at all. He remained unaffected by it, detached, and barely apologetic. 
 
-So I had enough. And I left the guild that I had created. And it made a bit of a fuss, but not enough apparently to get anyone to talk to me. So here's what really broke me: I left the guild, and no one came to talk to me. I had exactly zero support from anyone, not even someone that I considered an ally.
+So I had enough. And I left the guild that I had created. And it made a bit of a fuss, but not enough apparently to get anyone to talk to me. So here's what really broke me: I left the guild, and the people at the top, mainly hydra, simply did not talk to me. I had other allies, thankfully, whom I still consider good friends. And some that remained neutral and I still respect. But at the top of d.js sat people who couldn't care less for me as far as I could tell.
 
 Regardless of this I kept on truckin'. I couldn't *not* help the people in the Discord-js channel of DAPI so I helped them. I pointed them to the right direction. I was there for them while others were either ignoring it, or they came in just to troll & scream at people for being idiots.
 
