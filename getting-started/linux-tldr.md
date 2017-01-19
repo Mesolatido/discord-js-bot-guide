@@ -32,19 +32,19 @@ The following is a simple ping/pong bot. Save as a text file (e.g. `mybot.js`), 
 
 ```js
 var Discord = require("discord.js");
-var bot = new Discord.Client();
+var client = new Discord.Client();
 
-bot.on("message", msg => {
+client.on("message", msg => {
 	if (msg.content.startsWith("ping")) {
 		msg.channel.sendMessage("pong!");
 	}
 });
 
-bot.on('ready', () => {
+client.on('ready', () => {
   console.log('I am ready!');
 });
 
-bot.login("yourcomplicatedBotTokenhere");
+client.login("yourcomplicatedBotTokenhere");
 ```
 
 ## Launching the bot
