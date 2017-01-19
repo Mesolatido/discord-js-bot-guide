@@ -54,7 +54,7 @@ You can check out [Installing and Using a Proper Editor](/getting-started/instal
 
 #### How the examples are built
 
-Examples are built with the &lt;Clases&gt; defined within brackets. This means that when we show &lt;Client&gt; it means your client variable, such as `client` or `bot`. To get a better idea of what those are, refer to the documentation - in the menu on the left, every link is a class with the same name that is referred to here. You **must** replace these with the proper variables!
+Examples are built with the &lt;Classes&gt; defined within brackets. This means that when we show &lt;Client&gt; it means your client variable, such as `client` or `bot`. To get a better idea of what those are, refer to the documentation - in the menu on the left, every link is a class with the same name that is referred to here. You **must** replace these with the proper variables!
 
 ## Bot and Bot Client
 
