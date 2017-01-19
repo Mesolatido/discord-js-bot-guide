@@ -14,6 +14,7 @@
     * [Understanding Collections](coding-walkthroughs/understanding_collections.md)
     * [Understanding Roles](coding-walkthroughs/understanding_roles.md)
 * Code Examples
+    * [Frequently Asked Questions](frequently-asked-questions.md)
     * [Welcome Message every X users](samples/welcome_message_every_x_users.md)
     * [Message Reply Array](samples/message_reply_array.md)
     * [Command with arguments](samples/command_with_arguments.md)
