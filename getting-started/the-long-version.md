@@ -66,9 +66,13 @@ And now ready for the next step!
 
 ## Installing Discord.js
 
-So you have your CLI ready to go, in an empty folder, and you just wanna start coding. Alright, hold on one last second: let's install discord.js first. We do this using the Node Package Manager, or NPM: 
+So you have your CLI ready to go, in an empty folder, and you just wanna start coding. Alright, hold on one last second: let's install discord.js. But first we'll initialize this folder with NPM, which will ensure that any installed module will be here, and nowhere else. Simply run `npm init` and then hit Enter until the wizard is done. Don't change anything unless you know what you're doing! A new file is created called `package.json`, [click here](https://docs.npmjs.com/files/package.json) for more info about it.
 
-`npm i --save discord.js`
+And now we install Discord.js through NPM, the Node Package Manager:
+
+`npm i -S discord.js`
+
+> `i` means `install` and `-S` ensures it's saved in the package.json we just create!
 
 This will take a couple of heartbeats and display a lot of things on screen. Unless you have a big fat red message saying it didn't work, or package not found, or whatever, you're good to go. If you look at your folder, you'll notice that there's a new folder created here: `node_modules` . This contains all the installed packages for your project. 
 
@@ -80,27 +84,27 @@ Let's take a look at the most basic of examples, the ping-pong bot. Here's the c
 
 ```js
 var Discord = require("discord.js");
-var bot = new Discord.Client();
+var client = new Discord.Client();
 
-bot.on("message", msg => {
+client.on("message", msg => {
 	if (msg.content.startsWith("ping")) {
 		msg.channel.sendMessage("pong!");
 	}
 });
 
-bot.on('ready', () => {
+client.on('ready', () => {
   console.log('I am ready!');
 });
 
-bot.login("yourcomplicatedBotTokenhere");
+client.login("yourcomplicatedBotTokenhere");
 ```
 
-> The variable `bot` here is used an an example. The documentation uses `client`. Other people use whatever they want. When you see `client` or `bot` use whatever you put on the 2nd line of that code.
+> The variable `client` here is used an an example to represent the [&lt;Client&gt;](https://discord.js.org/#/docs/main/stable/class/Client) class. Some people call it `bot`, but you can technically it whatever you want. I recommend sticking to `client` though!
 
 Ok let's just... actually get this guy to work, because this is literally **a functional bot**. So let's make it run! 
 
  1. Copy that code and paste it in your editor.
- 2. Replace the string in the `bot.login()` function with *your* secret token
+ 2. Replace the string in the `client.login()` function with *your* secret token
  3. Save the file as `mybot.js`.
  4. In the CLI (which should still be in your project folder) type the following command: `node mybot.js`
 
@@ -112,11 +116,13 @@ Success! You now have a bot running! As you probably realize by now I could prob
 
 ## The Next Step?
 
-Now that you have a basic, functional bot, it's time to start adding new features! Head on over to [Your First Bot](../coding-walkthroughs/your_basic_bot.html) to continue on your journey.
+Now that you have a basic, functional bot, it's time to start adding new features! Head on over to [Your First Bot](../coding-walkthroughs/your_basic_bot.html) to continue on your journey with adding new commands and features!
 
 ## Addendum: Getting help and Support
 Before you start getting support from Discord servers to help you with your bot, I strongly advise taking a look at the following, very useful, resources. 
 
  - [Discord.js Documentation](http://discord.js.org) : For the love of all that is (un)holy, **read the documentation**. Yes, it will be alien at first if you are not used to "developer documentation" but it contains a whole lot of information about each and every feature of the API. Combine this with the examples above to see the API in context.
-
-If you have any issue with your code *that is not due to you being inexperienced in Javascript*, you may join the [Discord.js API official server](https://discord.gg/seraph-leblanc-oracle). The #node_discord-js channel on this server is there to help you with basic troubleshooting and complex implementation issues. We try to be helpful, but please understand that we're not there to teach you JavaScript. 
+ - [Evie.Codes on Youtube](https://www.youtube.com/channel/UCvQubaJPD0D-PSokbd5DAiw): If you prefer video to words, my youtube series (which is good, though no longer maintained with new videos!) gets you started with bots.
+ - [An Idiot's Guide](https://www.youtube.com/channel/UCLun-hgcYUgNvCCj4sIa-jA) is another great channel with more material. York's guides are great, and he continues to update them. 
+ - [Discord.js Official Server](https://discord.gg/bRCvFy9): Regardless of [drama](/drama.md), the official discord.js server still has a lot of competent people that can help you.
+ - [York's Server](https://discord.gg/9ESEZAx): The official server for An Idiot's Guide. Full of friendly helpful users!
