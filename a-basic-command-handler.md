@@ -45,6 +45,8 @@ bot.on("message", message => {
 bot.login(config.token);
 ```
 
+> **Fair Warning**: The require() command here relies on *user input* to call a file, which can be dangerous. Your homework is to find a way to make sure *only* commands from the `./commands/` folder are called, and anything else such as `../../../../../etc/passwd` can't be loaded in memory because someone knows linux!
+
 ## Example commands
 
 This would be the content of the `./commands/ping.js` file, which is called with `!ping` (assuming `!` as a prefix)
