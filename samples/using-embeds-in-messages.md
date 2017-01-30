@@ -103,7 +103,7 @@ const embed = new Discord.RichEmbed()
   .addField('Inline Field 3', 'You can have a maximum of 25 fields.', true);
   
   msg.channel.sendEmbed(embed);
-  ```
+```
 
 Which produces the following: 
 ![](http://i.imgur.com/oSVvWSF.png)
