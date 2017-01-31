@@ -1,6 +1,6 @@
 # Understanding Collections
 
-> **PLEASE NOTE THIS GUIDE WILL NO LONGER BE UPDATED DUE TO DRAMA**
+> **Please Note**: This guide will be updated less often due to [personal reasons](/drama.md)
 
 In this page we will explore Collections, and how to use them to grab data from various part of the API.
 

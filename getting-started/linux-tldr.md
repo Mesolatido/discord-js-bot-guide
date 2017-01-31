@@ -1,7 +1,6 @@
 # Getting Started - Linux Short Version
 
-> **PLEASE NOTE THIS GUIDE WILL NO LONGER BE UPDATED DUE TO DRAMA**
-
+> **Please Note**: This guide will be updated less often due to [personal reasons](/drama.md)
 
 > **This is the TL;DR version for Linux**. If you wish for a long version with more explanations, please see [this guide](the-long-version.html)
 

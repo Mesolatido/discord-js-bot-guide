@@ -1,6 +1,6 @@
 # Understanding Events and Handlers
 
-> **PLEASE NOTE THIS GUIDE WILL NO LONGER BE UPDATED DUE TO DRAMA**
+> **Please Note**: This guide will be updated less often due to [personal reasons](/drama.md)
 
 We already explored one event handler in [Your Basic Bot](your-basic-bot.html), the `message` handler. Now let's take a look at some of the most important handlers that you will use, along with an example.
 

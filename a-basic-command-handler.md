@@ -1,5 +1,7 @@
 # A Basic Command Handler Example```
 
+> **Please Note**: This guide will be updated less often due to [personal reasons](/drama.md)
+
 > This was *supposed* to be covered in my next YouTube video. But, the footage was unuseable and I'm no longer making videos, so all you get is this code.
 
 A *Command Handler* is essentially a way to separate your commands into different files, instead of having a bunch of `if/else` conditions inside your code (or a `switch/case` if you're being fancy).

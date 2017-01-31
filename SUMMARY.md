@@ -8,7 +8,7 @@
   * [Getting Started - Windows TL;DR](getting-started/windows-tldr.md)
   * [Frequently Asked Questions](frequently-asked-questions.md)
   * [Installing and Using a proper editor](getting-started/installing_and_using_a_proper_editor.md)
-* Coding Walkthrough
+* [Coding Walkthrough](coding-walkthrough.md)
   * [Your First Bot](coding-walkthroughs/your_basic_bot.md)
   * [Adding a config.json file](adding-a-configjson-file.md)
   * [Understanding Events and Handlers](coding-walkthroughs/events_and_handlers.md)

@@ -1,6 +1,6 @@
 # Selfbots, the greatest thing in the universe
 
-> **PLEASE NOTE THIS GUIDE WILL NO LONGER BE UPDATED DUE TO DRAMA**
+> **Please Note**: This guide will be updated less often due to [personal reasons](/drama.md)
 
 So, my friend, you are wondering what is a selfbot? Well let me tell you a little story.
 

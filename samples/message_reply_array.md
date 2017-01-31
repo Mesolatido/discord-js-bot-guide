@@ -1,6 +1,6 @@
 # Message Reply Array
 
-> **PLEASE NOTE THIS GUIDE WILL NO LONGER BE UPDATED DUE TO DRAMA**
+> **Please Note**: This guide will be updated less often due to [personal reasons](/drama.md)
 
 This sample shows the use of a simple string array to reply specific strings when triggered. 
 

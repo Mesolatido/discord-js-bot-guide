@@ -1,7 +1,6 @@
 # Getting Started with Discord.js
 
-> **PLEASE NOTE THIS GUIDE WILL NO LONGER BE UPDATED DUE TO DRAMA**
-
+> **Please Note**: This guide will be updated less often due to [personal reasons](/drama.md)
 
 So, you want to write a bot and you know some JavaScript, or maybe even node.js. You want to do cool things like a music bot, tag commands, random image searches, the whole shebang. Well you're at the right place!
 
@@ -124,5 +123,5 @@ Before you start getting support from Discord servers to help you with your bot,
  - [Discord.js Documentation](http://discord.js.org) : For the love of all that is (un)holy, **read the documentation**. Yes, it will be alien at first if you are not used to "developer documentation" but it contains a whole lot of information about each and every feature of the API. Combine this with the examples above to see the API in context.
  - [Evie.Codes on Youtube](https://www.youtube.com/channel/UCvQubaJPD0D-PSokbd5DAiw): If you prefer video to words, my youtube series (which is good, though no longer maintained with new videos!) gets you started with bots.
  - [An Idiot's Guide](https://www.youtube.com/channel/UCLun-hgcYUgNvCCj4sIa-jA) is another great channel with more material. York's guides are great, and he continues to update them. 
- - [Discord.js Official Server](https://discord.gg/bRCvFy9): Regardless of [drama](/drama.md), the official discord.js server still has a lot of competent people that can help you.
+ - [Discord.js Official Server](https://discord.gg/bRCvFy9): Regardless of [personal reasons I'm not there anymore](/drama.md), the official discord.js server still has a lot of competent people that can help you.
  - [York's Server](https://discord.gg/9ESEZAx): The official server for An Idiot's Guide. Full of friendly helpful users!

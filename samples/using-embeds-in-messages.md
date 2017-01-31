@@ -1,5 +1,7 @@
 # Embeds and Messages
 
+> **Please Note**: This guide will be updated less often due to [personal reasons](/drama.md)
+
 You've seen them all around - these sexy dark grey boxes with a nice color on the left, images, and **tables** oh my god. So nice-looking, right? Well, let me show you how to make them!
 
 > **Fair Warning**: Embeds might look nice but they can be disabled through permissions and user preferences, and will not look the same on mobile - especially complex ones. It's strongly recommended *not* to use them unless you have a text-only fallback. Yes they're nice, but, don't use them if you don't *need* to!

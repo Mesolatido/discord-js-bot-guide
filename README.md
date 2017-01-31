@@ -1,6 +1,6 @@
 # Discord.js Getting Started
 
-> **PLEASE NOTE THIS GUIDE WILL NO LONGER BE UPDATED [DUE TO DRAMA](/drama.md)**
+> **Please Note**: This guide will be updated less often due to [personal reasons](/drama.md)
 
 ## Introduction
 
@@ -11,9 +11,9 @@ Seeing as though there needed to be some more detailed explanations as well as c
 ## Get Support
 If you have any questions after reading this guide please join us on the official Discord.js server:
 
-[![Join the Discord.js Server](https://i.imgur.com/giRbeKh.png)](https://discord.gg/9ESEZAx)
+[![Join the Alternative Discord.js Server](https://i.imgur.com/giRbeKh.png)](https://discord.gg/9ESEZAx)
 
-![Discord.js Official Server](https://discordapp.com/api/guilds/260202843686830080/embed.png)
+![Alternative Discord.js Server](https://discordapp.com/api/guilds/260202843686830080/embed.png)
 
 ## Updating of this guide
 
