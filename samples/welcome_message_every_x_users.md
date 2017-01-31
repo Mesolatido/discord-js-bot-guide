@@ -29,7 +29,7 @@ bot.on("guildMemberRemove", (member) => {
 });
 ```
 
-But wait, where do we welcome users? That's done in `serverNewMember`, when the count reaches the number you want: 
+But wait, where do we welcome users? That's done in `guildMemberAdd`, when the count reaches the number you want: 
 
 ```js
 bot.on("guildMemberAdd", (member) => {
