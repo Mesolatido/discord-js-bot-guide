@@ -39,7 +39,7 @@ This is, specifically, an event in *discord.js* but it's similar to how other AP
 Why is this important? Well, if you intend to use your bot on a large server, or if you want it to be on multiple servers, this becomes a large number of events triggering at every moment. I don't want to go into too much optimization talk, but for a single point: **use a single event function for each event**.
 
 Discord.js contains a large number of events that can trigger under certain situations. For instance, the `ready` event triggers when the bot comes online. The `serverNewMember` event triggers when a new user joins a server shared with the bot. For a full list of events, see [Events in the documentation](http://discordjs.readthedocs.io/en/latest/docs_client.html#events). We will come back to some of those later in this chapter.
-
+ 
 ## Adding a second command
 
 One of the first useful things you might want to learn is how to add a second command to your bot. While there are *better* ways than what I'm about to show you, for the time being this will be enough.
